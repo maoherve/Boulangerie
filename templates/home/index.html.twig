@@ -1,1 +1,7 @@
-{% extends 'includes/base.html.twig' %}
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+    {{ parent() }}
+    {% include 'home/_carousel.html.twig' %}
+{% endblock %}
+

@@ -36,6 +36,16 @@ class Carousel
      */
     private $updated;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $title;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $description;
+
 
 
 
@@ -92,6 +102,30 @@ class Carousel
     public function setUpdated(?\DateTimeInterface $updated): self
     {
         $this->updated = $updated;
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(?string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
         return $this;
     }
 

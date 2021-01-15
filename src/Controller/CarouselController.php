@@ -49,16 +49,6 @@ class CarouselController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="carousel_show", methods={"GET"})
-     */
-    public function show(Carousel $carousel): Response
-    {
-        return $this->render('carousel/show.html.twig', [
-            'carousel' => $carousel,
-        ]);
-    }
-
-    /**
      * @Route("/{id}/edit", name="carousel_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Carousel $carousel): Response

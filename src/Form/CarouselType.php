@@ -14,6 +14,8 @@ class CarouselType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('title')
+            ->add('description')
             ->add('imageName', TextType::class, ['label' => 'Nom de l\'image'])
             ->add('imageFile', VichFileType::class, [
                 'required' => false,

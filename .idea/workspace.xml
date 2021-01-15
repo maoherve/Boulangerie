@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="98c9ee48-c05e-428d-9c2e-71cf4eb877de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CarouselController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CarouselController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Carousel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Carousel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CarouselType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CarouselType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carousel/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carousel/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carousel/show.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/_carousel.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/_carousel.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +162,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610572503659</updated>
-      <workItem from="1610572505131" duration="20453000" />
+      <workItem from="1610572505131" duration="26457000" />
     </task>
     <servers />
   </component>

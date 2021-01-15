@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-5">
+        <div class="adminContainer row">
+            <div class="card col-6 mt-3" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Admin "Qui sommes nous".</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Modifier les éléments de "Qui sommes nous".</h6>
+                    <a class="btn btn-primary" href="{{ path('carousel_index') }}">Ici !</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

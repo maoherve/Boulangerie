@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98c9ee48-c05e-428d-9c2e-71cf4eb877de" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/neoCray.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/neoCray.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/carousel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CarouselController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CarouselController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Carousel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Carousel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CarouselType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CarouselType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/carousel/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carousel/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/carousel/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/_carousel.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/_carousel.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carousel/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/carousel/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carousel/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/carousel/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carousel/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/carousel/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carousel/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/carousel/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carousel/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/carousel/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +25,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -131,6 +138,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="1n1zhQZ5AOZ6BdFTuSLdsmIy3eO" />
@@ -151,6 +160,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/admin" />
       <recent name="$PROJECT_DIR$/templates/includes" />
     </key>
   </component>
@@ -162,7 +172,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610572503659</updated>
-      <workItem from="1610572505131" duration="26457000" />
+      <workItem from="1610572505131" duration="27099000" />
+      <workItem from="1610718388629" duration="6844000" />
     </task>
     <servers />
   </component>
@@ -179,5 +190,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

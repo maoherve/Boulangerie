@@ -9,9 +9,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+
 
 /**
  * @Route("/carousel")
+ * @IsGranted("ROLE_ADMIN")
  */
 class CarouselController extends AbstractController
 {
@@ -20,7 +23,7 @@ class CarouselController extends AbstractController
      */
     public function index(CarouselRepository $carouselRepository): Response
     {
-        return $this->render('carousel/index.html.twig', [
+        return $this->render('admin/carousel/index.html.twig', [
             'carousels' => $carouselRepository->findAll(),
         ]);
     }
@@ -39,10 +42,10 @@ class CarouselController extends AbstractController
             $entityManager->persist($carousel);
             $entityManager->flush();
 
-            return $this->redirectToRoute('carousel_index');
+            return $this->redirectToRoute('admin/carousel_index');
         }
 
-        return $this->render('carousel/new.html.twig', [
+        return $this->render('admin/carousel/new.html.twig', [
             'carousel' => $carousel,
             'form' => $form->createView(),
         ]);
@@ -59,10 +62,10 @@ class CarouselController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('carousel_index');
+            return $this->redirectToRoute('admin/carousel_index');
         }
 
-        return $this->render('carousel/edit.html.twig', [
+        return $this->render('admin/carousel/edit.html.twig', [
             'carousel' => $carousel,
             'form' => $form->createView(),
         ]);
@@ -79,6 +82,6 @@ class CarouselController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('carousel_index');
+        return $this->redirectToRoute('admin/carousel_index');
     }
 }

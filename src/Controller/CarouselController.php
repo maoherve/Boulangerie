@@ -42,7 +42,7 @@ class CarouselController extends AbstractController
             $entityManager->persist($carousel);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin/carousel_index');
+            return $this->redirectToRoute('carousel_index');
         }
 
         return $this->render('admin/carousel/new.html.twig', [

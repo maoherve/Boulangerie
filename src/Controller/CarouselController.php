@@ -62,7 +62,7 @@ class CarouselController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin/carousel_index');
+            return $this->redirectToRoute('carousel_index');
         }
 
         return $this->render('admin/carousel/edit.html.twig', [
@@ -82,6 +82,6 @@ class CarouselController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin/carousel_index');
+        return $this->redirectToRoute('carousel_index');
     }
 }

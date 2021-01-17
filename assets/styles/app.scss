@@ -1,9 +1,20 @@
 @import "~bootstrap/scss/bootstrap";
 @import "carousel";
 @import "admin";
+@import "footer";
+@import "products";
 
 body {
 }
 .homeContainer {
     background-color: #0a53be;
 }
+a {
+    list-style: none;
+}
+
+
+/*::selection {
+    background: $primary-orange;
+    text-shadow: none;
+}*/

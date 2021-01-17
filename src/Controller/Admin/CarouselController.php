@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Carousel;
 use App\Form\CarouselType;
@@ -15,6 +15,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 /**
  * @Route("/carousel")
  * @IsGranted("ROLE_ADMIN")
+ *
+ * CRUD of carousel
  */
 class CarouselController extends AbstractController
 {
@@ -42,7 +44,7 @@ class CarouselController extends AbstractController
             $entityManager->persist($carousel);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin/carousel_index');
+            return $this->redirectToRoute('carousel_index');
         }
 
         return $this->render('admin/carousel/new.html.twig', [
@@ -62,7 +64,7 @@ class CarouselController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin/carousel_index');
+            return $this->redirectToRoute('carousel_index');
         }
 
         return $this->render('admin/carousel/edit.html.twig', [
@@ -82,6 +84,6 @@ class CarouselController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin/carousel_index');
+        return $this->redirectToRoute('carousel_index');
     }
 }

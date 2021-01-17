@@ -30,6 +30,8 @@ class HproductsController extends AbstractController
     /**
      * @Route("/productDetails/{id}", name="Details")
      * @return Response
+     *
+     * show details of an article
      */
     public function show(int $id): Response
     {

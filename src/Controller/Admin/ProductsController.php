@@ -19,6 +19,8 @@ class ProductsController extends AbstractController
 {
     /**
      * @Route("/", name="products_index", methods={"GET"})
+     *
+     * CRUD for the products
      */
     public function index(ProductsRepository $productsRepository): Response
     {

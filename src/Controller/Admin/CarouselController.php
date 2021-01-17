@@ -15,6 +15,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 /**
  * @Route("/carousel")
  * @IsGranted("ROLE_ADMIN")
+ *
+ * CRUD of carousel
  */
 class CarouselController extends AbstractController
 {

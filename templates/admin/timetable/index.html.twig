@@ -1,0 +1,41 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    <h1>Timetable index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Morning</th>
+                <th>Afternoon</th>
+                <th>Close</th>
+                <th>winter Holiday</th>
+                <th>summer Holiday</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for timetable in timetables %}
+            <tr>
+                <td>{{ timetable.id }}</td>
+                <td>{{ timetable.morning }}</td>
+                <td>{{ timetable.afternoon }}</td>
+                <td>{{ timetable.close }}</td>
+                <td>{{ timetable.winterHoliday }}</td>
+                <td>{{ timetable.summerHoliday }}</td>
+
+                <td>
+                    <a href="{{ path('timetable_edit', {'id': timetable.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('timetable_new') }}">Create new</a>
+{% endblock %}

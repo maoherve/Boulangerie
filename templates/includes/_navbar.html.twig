@@ -8,7 +8,7 @@
             <div class="navbar-nav">
                 <a class="nav-link" aria-current="page" href="{{ path('home') }}">Acceuil</a>
                 <a class="nav-link" href="{{ path('products_index') }}">Nos produits</a>
-                <a class="nav-link" href="#">Horaires</a>
+                <a class="nav-link" href="{{ path('timetable') }}">Horaires</a>
                 {% if app.user %}
                         {% if is_granted("ROLE_ADMIN") %}
                             <a class="nav-link" href="{{ path('admin_index') }}">Administration</a>

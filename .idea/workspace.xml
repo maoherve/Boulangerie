@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="98c9ee48-c05e-428d-9c2e-71cf4eb877de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/hproducts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hproducts/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/_navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +166,7 @@
       <updated>1610572503659</updated>
       <workItem from="1610572505131" duration="27099000" />
       <workItem from="1610718388629" duration="7270000" />
-      <workItem from="1610836270975" duration="8496000" />
+      <workItem from="1610836270975" duration="13533000" />
     </task>
     <servers />
   </component>

@@ -1,18 +1,19 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="productContainer container container-fluid">
+        {% for product in products %}
 
-<div class="example-wrapper mt-5">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+            <div class="card mt-5" style="width: 18rem;">
+                <a class="" href="{{ path('products_Details', {id: product.id}) }}">
+                    <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="card-img-top" alt="product_picture">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/mao/Documents/code/Boulangerie/src/Controller/HproductsController.php'|file_link(0) }}">src/Controller/HproductsController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/mao/Documents/code/Boulangerie/templates/hproducts/index.html.twig'|file_link(0) }}">templates/hproducts/index.html.twig</a></code></li>
-    </ul>
-</div>
+                    <div class="card-body">
+                        <p class="card-text">{{ product.name }}</p>
+                    </div>
+                </a>
+            </div>
+        {% else %}
+            <div class="card-body"><p>Pas de produits disponible !</p></div>
+        {% endfor %}    </div>
 {% endblock %}

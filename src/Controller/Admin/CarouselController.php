@@ -21,7 +21,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 class CarouselController extends AbstractController
 {
     /**
-     * @Route("/", name="carousel_index", methods={"GET"})
+     * @Route("/", name="admin_carousel_index", methods={"GET"})
      */
     public function index(CarouselRepository $carouselRepository): Response
     {
@@ -44,7 +44,7 @@ class CarouselController extends AbstractController
             $entityManager->persist($carousel);
             $entityManager->flush();
 
-            return $this->redirectToRoute('carousel_index');
+            return $this->redirectToRoute('admin_carousel_index');
         }
 
         return $this->render('admin/carousel/new.html.twig', [
@@ -64,7 +64,7 @@ class CarouselController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('carousel_index');
+            return $this->redirectToRoute('admin_carousel_index');
         }
 
         return $this->render('admin/carousel/edit.html.twig', [
@@ -84,6 +84,6 @@ class CarouselController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('carousel_index');
+        return $this->redirectToRoute('admin_carousel_index');
     }
 }

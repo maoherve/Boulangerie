@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+{% extends 'adminLayout.html.twig' %}
 
-<title>New Products</title>
 
-{% block body %}
+{% block main %}
     <h1>Create new Products</h1>
 
     {{ include('admin/products/_form.html.twig') }}
 
-    <a href="{{ path('products_index') }}">back to list</a>
+    <a href="{{ path('admin_products_index') }}">back to list</a>
 {% endblock %}

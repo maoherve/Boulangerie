@@ -4,6 +4,8 @@
 
 
    <div class="productContainer container container-fluid">
+      <h2>Nos horaires d'ouvertures:</h2>
+
       {% for timetable in timetables %}
 
          <table class="table table-bordered">
@@ -43,7 +45,15 @@
             </tr>
             </tbody>
          </table>
+
+          <h2>Congés annuels:</h2>
+         <p>{{ timetable.winterHoliday }}</p>
+         <p>{{ timetable.summerHoliday }}</p>
       {% endfor %}
    </div>
 
+{% endblock %}
+
+{% block footer %}
+   {% include 'includes/_fixedFooter.html.twig' %}
 {% endblock %}

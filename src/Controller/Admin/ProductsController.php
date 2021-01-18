@@ -18,7 +18,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProductsController extends AbstractController
 {
     /**
-     * @Route("/", name="products_index", methods={"GET"})
+     * @Route("/", name="admin_products_index", methods={"GET"})
      *
      * CRUD for the products
      */
@@ -43,7 +43,7 @@ class ProductsController extends AbstractController
             $entityManager->persist($product);
             $entityManager->flush();
 
-            return $this->redirectToRoute('products_index');
+            return $this->redirectToRoute('admin_products_index');
         }
 
         return $this->render('admin/products/new.html.twig', [
@@ -64,7 +64,7 @@ class ProductsController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('products_index');
+            return $this->redirectToRoute('admin_products_index');
         }
 
         return $this->render('admin/products/edit.html.twig', [
@@ -84,6 +84,6 @@ class ProductsController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('products_index');
+        return $this->redirectToRoute('admin_products_index');
     }
 }

@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+{% extends 'adminLayout.html.twig' %}
 
-<title>New Carousel</title>
 
-{% block body %}
+{% block main %}
     <h1>Create new Carousel</h1>
 
     {{ include('admin/carousel/_form.html.twig') }}
 
-    <a href="{{ path('carousel_index') }}">back to list</a>
+    <a href="{{ path('admin_carousel_index') }}">back to list</a>
 {% endblock %}

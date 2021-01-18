@@ -18,7 +18,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class TimetableController extends AbstractController
 {
     /**
-     * @Route("/", name="timetable_index", methods={"GET"})
+     * @Route("/", name="admin_timetable_index", methods={"GET"})
      */
     public function index(TimetableRepository $timetableRepository): Response
     {
@@ -41,7 +41,7 @@ class TimetableController extends AbstractController
             $entityManager->persist($timetable);
             $entityManager->flush();
 
-            return $this->redirectToRoute('timetable_index');
+            return $this->redirectToRoute('admin_timetable_index');
         }
 
         return $this->render('admin/timetable/new.html.twig', [
@@ -62,7 +62,7 @@ class TimetableController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('timetable_index');
+            return $this->redirectToRoute('admin_timetable_index');
         }
 
         return $this->render('admin/timetable/edit.html.twig', [
@@ -82,6 +82,6 @@ class TimetableController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('timetable_index');
+        return $this->redirectToRoute('admin_timetable_index');
     }
 }

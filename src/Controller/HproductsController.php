@@ -56,16 +56,21 @@ class HproductsController extends AbstractController
      * @Route("/category/{categoryName}", name="show_category")
      * @param string $categoryName
      * @return Response
-     *
+     */
     public function showByCategory(string $categoryName):Response
     {
-        $category = $this->getDoctrine()->getRepository(Products::class)
-            ->findBy(['name' => $categoryName]);
-            ->distinct(true)
+        $category = $this->getDoctrine()->getRepository(Categories::class)
+            ->findOneBy(['name' => $categoryName]);
+        $products = $this->getDoctrine()->getRepository(Products::class)
+            ->findBy(['categories' => $category],['id'=>'DESC'],3);
+        if (!$products) {
+            throw $this->createNotFoundException(
+                'No category with '.$categoryName.' name, found in category\'s table.'
+            );
+        }
 
-
-        return $this->render("hproducts/categorie.html.twig",['category' => $category]);
-    }*/
+        return $this->render("hproducts/category.html.twig",['products' => $products]);
+    }
 
 
 }

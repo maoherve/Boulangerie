@@ -47,6 +47,13 @@ class Products
      */
     private $updated;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Categories::class, inversedBy="products")
+     */
+    private $categories;
+
+
+
 
 
 
@@ -126,4 +133,17 @@ class Products
         $this->updated = $updated;
         return $this;
     }
+
+    public function getCategories(): ?Categories
+    {
+        return $this->categories;
+    }
+
+    public function setCategories(?Categories $categories): self
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
+
 }

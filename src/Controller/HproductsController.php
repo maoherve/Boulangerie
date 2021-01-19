@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Categories;
 use App\Entity\Products;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,8 +23,13 @@ class HproductsController extends AbstractController
             ->getRepository(Products::class)
             ->findAll();
 
+        $categories = $this->getDoctrine()
+            ->getRepository(Categories::class)
+            ->findAll();
+
+
         return $this->render('hproducts/index.html.twig', [
-            'products' => $products,
+            'products' => $products, 'categories' => $categories,
         ]);
     }
 
@@ -45,4 +51,26 @@ class HproductsController extends AbstractController
             'product' => $product,
         ]);
     }
+
+    /**
+     * @Route("/category/{categoryName}", name="show_category")
+     * @param string $categoryName
+     * @return Response
+     */
+    public function showByCategory(string $categoryName):Response
+    {
+        $category = $this->getDoctrine()->getRepository(Categories::class)
+            ->findOneBy(['name' => $categoryName]);
+        $products = $this->getDoctrine()->getRepository(Products::class)
+            ->findBy(['categories' => $category],['id'=>'DESC'],3);
+        if (!$products) {
+            throw $this->createNotFoundException(
+                'No category with '.$categoryName.' name, found in category\'s table.'
+            );
+        }
+
+        return $this->render("hproducts/category.html.twig",['products' => $products]);
+    }
+
+
 }

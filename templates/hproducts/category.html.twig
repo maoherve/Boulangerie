@@ -1,13 +1,8 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
+
     <div class="productContainer container container-fluid mb-5">
-        <ul>
-            {% for category in categories %}
-                <li><a href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
-                        {{ category.name }}</a></li>
-            {% endfor %}
-        </ul>
         <div class="row">
             {% for product in products %}
                 <div class="card container mt-5" style="width: 25rem;">
@@ -20,8 +15,9 @@
                     </a>
                 </div>
             {% else %}
-                <div class="card-body">Pas de produit disponible !</div>
+                <li>Aucun produit pour cette categorie</li>
             {% endfor %}
         </div>
     </div>
 {% endblock %}
+

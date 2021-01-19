@@ -2,12 +2,14 @@
 
 namespace App\Form;
 
+use App\Entity\Categories;
 use App\Entity\Products;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichFileType;
+
 
 class ProductsType extends AbstractType
 {
@@ -16,6 +18,7 @@ class ProductsType extends AbstractType
         $builder
             ->add('name')
             ->add('ingredient')
+            ->add('categories', null, ['choice_label' => 'name'])
             ->add('imageName', TextType::class, ['label' => 'Nom de l\'image'])
             ->add('imageFile', VichFileType::class, [
                 'required' => false,

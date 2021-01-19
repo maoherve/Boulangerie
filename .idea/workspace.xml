@@ -3,25 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="98c9ee48-c05e-428d-9c2e-71cf4eb877de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/timetable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/timetable.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/CarouselController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/CarouselController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/TimetableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/TimetableController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Htimetable/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Htimetable/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/carousel/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/carousel/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/carousel/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/carousel/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/carousel/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/carousel/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/products/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/products/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/products.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/products.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/products/baguette.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/HproductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HproductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProductsType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductsType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/products/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/products/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/products/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/products/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/timetable/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/timetable/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/timetable/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/timetable/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/timetable/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/timetable/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_footer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/hproducts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hproducts/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/hproducts/productDetails/productDetails.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hproducts/productDetails/productDetails.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +168,8 @@
       <updated>1610572503659</updated>
       <workItem from="1610572505131" duration="27099000" />
       <workItem from="1610718388629" duration="7270000" />
-      <workItem from="1610836270975" duration="16996000" />
+      <workItem from="1610836270975" duration="17694000" />
+      <workItem from="1611049238747" duration="8966000" />
     </task>
     <servers />
   </component>

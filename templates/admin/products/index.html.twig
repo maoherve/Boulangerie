@@ -11,6 +11,7 @@
                 <th>Name</th>
                 <th>Ingredient</th>
                 <th>ImageName</th>
+                <th>Category</th>
                 <th>Updated</th>
                 <th>actions</th>
             </tr>
@@ -22,6 +23,7 @@
                 <td>{{ product.name }}</td>
                 <td>{{ product.ingredient }}</td>
                 <td>{{ product.imageName }}</td>
+                <td>{{ product.categories.name }}</td>
                 <td>{{ product.updated ? product.updated|date('d-m-Y H:i') : '' }}</td>
                 <td>
                     <a href="{{ path('products_edit', {'id': product.id}) }}">edit</a>

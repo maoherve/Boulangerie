@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    /**
+    * @Route("/categorie/{categorieName}", name="show_categorie")
+    * @param string $categorieName
+    * @return Response
+    */
+    public function showByCategorie(string $categorieName):Response
+    {
+    $categories = $this->getDoctrine()->getRepository(Products::class)
+    ->findBy(['categorie' => $categorieName]);
+
+
+
+    return $this->render("hproducts/categorie.html.twig",['category' => $categories]);
+    }{% endblock %}

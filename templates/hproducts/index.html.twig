@@ -1,20 +1,26 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
-    <div class="productContainer container container-fluid">
-        {% for product in products %}
+    <div class="productContainer container container-fluid mb-5">
+        <ul>
+            {% for category in categories %}
+                <li><a href="">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+        <div class="row">
+            {% for product in products %}
+                <div class="card container mt-5" style="width: 25rem;">
+                    <a class="" href="{{ path('products_Details', {id: product.id}) }}">
+                        <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="card-img-top" alt="product_picture">
 
-            <div class="card mt-5" style="width: 18rem;">
-                <a class="" href="{{ path('products_Details', {id: product.id}) }}">
-                    <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="card-img-top" alt="product_picture">
-
-                    <div class="card-body">
-                        <p class="card-text">{{ product.name }}</p>
-                    </div>
-                </a>
-            </div>
-        {% else %}
-            <div class="card-body"><p>Pas de produits disponible !</p></div>
-        {% endfor %}
+                        <div class="card-body">
+                            <p class="card-text">{{ product.name }}</p>
+                        </div>
+                    </a>
+                </div>
+            {% else %}
+                <div class="card-body">Pas de collection disponible !</div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

@@ -1,3 +1,43 @@
 .productContainer {
   margin-top: 150px;
 }
+
+.productDetail{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.productDetailPicture {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+
+  width: 350px;
+  height: auto;
+}
+
+.productDetailInformations {
+  margin-top: 50px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .productDetail {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+  }
+}
+
+
+

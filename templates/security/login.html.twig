@@ -5,7 +5,7 @@
 {% block main %}
 <form method="post" class="container container-fluid mt-5">
     {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        <div class="alert alert-danger mt-5">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
     {% if app.user %}
@@ -38,4 +38,9 @@
         Sign in
     </button>
 </form>
+{% endblock %}
+
+
+{% block footer %}
+    {% include 'includes/_fixedFooter.html.twig' %}
 {% endblock %}

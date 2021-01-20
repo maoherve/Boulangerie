@@ -2,12 +2,11 @@
 
 {% block main %}
     <div class="productContainer container container-fluid mb-5">
-        <ul>
             {% for category in categories %}
-                <li><a href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
-                        {{ category.name }}</a></li>
+                <button type="button" class="btn "><a href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
+                        {{ category.name }}</a></button>
             {% endfor %}
-        </ul>
+
         <div class="row">
             {% for product in products %}
                 <div class="card container mt-5" style="width: 25rem;">

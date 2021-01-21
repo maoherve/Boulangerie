@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98c9ee48-c05e-428d-9c2e-71cf4eb877de" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/neoCray.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/neoCray.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HproductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HproductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hproducts/category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hproducts/category.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hproducts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hproducts/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/carousel/baki-1400-dinner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/products/pain complet.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/_fixedFooter.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_fixedFooter.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/_footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +170,8 @@
       <workItem from="1610718388629" duration="7270000" />
       <workItem from="1610836270975" duration="17694000" />
       <workItem from="1611049238747" duration="12599000" />
+      <workItem from="1611141018345" duration="4776000" />
+      <workItem from="1611247072539" duration="2130000" />
     </task>
     <servers />
   </component>

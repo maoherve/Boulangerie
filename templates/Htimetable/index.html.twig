@@ -10,7 +10,6 @@
          <table class="table table-bordered">
             <thead>
             <tr>
-               <th scope="col"></th>
                <th scope="col">lundi</th>
                <th scope="col">Mardi</th>
                <th scope="col">Mercredi</th>
@@ -23,7 +22,6 @@
             </thead>
             <tbody>
             <tr>
-               <th scope="row">Matin</th>
                <td>{{ timetable.close }}</td>
                <td>{{ timetable.morning }}</td>
                <td>{{ timetable.morning }}</td>
@@ -33,7 +31,6 @@
                <td>{{ timetable.morning }}</td>
             </tr>
             <tr>
-               <th scope="row">Après-midi</th>
                <td>{{ timetable.close }}</td>
                <td>{{ timetable.afternoon }}</td>
                <td>{{ timetable.afternoon }}</td>
@@ -51,7 +48,4 @@
       {% endfor %}
    </div>
 
-{% endblock %}
-
-{% block footer %}
 {% endblock %}

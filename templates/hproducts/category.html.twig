@@ -10,13 +10,11 @@
         <div class="row">
             {% for product in products %}
                 <div class="card container mt-5" style="width: 25rem;">
-                    <a class="" href="{{ path('products_Details', {id: product.id}) }}">
                         <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="card-img-top mt-2" alt="product_picture">
 
                         <div class="card-body">
                             <p class="card-text">{{ product.name }}</p>
                         </div>
-                    </a>
                 </div>
             {% else %}
                 <p>Aucun produit pour cette categorie</p>

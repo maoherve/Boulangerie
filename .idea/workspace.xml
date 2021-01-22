@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98c9ee48-c05e-428d-9c2e-71cf4eb877de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/carousel/caisseTel.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/products/Pain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/products/baguette.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/products/brioche.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/products/brioche.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/products/completTest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/products/croissant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/products/croissant.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/products/galetteRoi.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/products/painchoc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/products/vracGateaux.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/hproducts/category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hproducts/category.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="98c9ee48-c05e-428d-9c2e-71cf4eb877de" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

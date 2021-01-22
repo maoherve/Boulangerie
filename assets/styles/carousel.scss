@@ -1,8 +1,7 @@
 
 
-/*@media screen and (min-width: 991px) {
- .carousel-item > .carouselPicture {
-  min-width: auto;
-  height: auto;
+@media screen and (max-width: 1000px) {
+  .carouselPicture {
+    margin-top: 30px;
   }
-}*/
+}

@@ -65,9 +65,13 @@ class HproductsController extends AbstractController
             ->findBy(['categories' => $category],['id'=>'DESC']);
 
 
+        $categories = $this->getDoctrine()
+            ->getRepository(Categories::class)
+            ->findAll();
 
-        return $this->render("hproducts/category.html.twig",['products' => $products]);
+
+        return $this->render("hproducts/category.html.twig",
+            ['products' => $products,
+                'categories' => $categories,]);
     }
-
-
 }

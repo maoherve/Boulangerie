@@ -1,0 +1,14 @@
+.mapContainer {
+  margin-top: 100px;
+}
+
+/* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+#maCarte{
+  height:700px;
+}
+
+@media (max-width: 768px) {
+  #maCarte {
+    height:400px;
+  }
+}

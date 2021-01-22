@@ -62,15 +62,16 @@ class HproductsController extends AbstractController
         $category = $this->getDoctrine()->getRepository(Categories::class)
             ->findOneBy(['name' => $categoryName]);
         $products = $this->getDoctrine()->getRepository(Products::class)
-            ->findBy(['categories' => $category],['id'=>'DESC'],3);
-        if (!$products) {
-            throw $this->createNotFoundException(
-                'No category with '.$categoryName.' name, found in category\'s table.'
-            );
-        }
+            ->findBy(['categories' => $category],['id'=>'DESC']);
 
-        return $this->render("hproducts/category.html.twig",['products' => $products]);
+
+        $categories = $this->getDoctrine()
+            ->getRepository(Categories::class)
+            ->findAll();
+
+
+        return $this->render("hproducts/category.html.twig",
+            ['products' => $products,
+                'categories' => $categories,]);
     }
-
-
 }

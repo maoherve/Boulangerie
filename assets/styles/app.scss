@@ -4,14 +4,14 @@
 @import "footer";
 @import "products";
 @import "timetable";
+@import "map";
 
-body {
-}
 .homeContainer {
     background-color: #0a53be;
 }
 a {
-    list-style: none;
+    text-decoration: none !important;
+    color: black;
 }
 
 

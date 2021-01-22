@@ -4,14 +4,14 @@
 
     <div class="productContainer container container-fluid mb-5">
         {% for category in categories %}
-            <button type="button" class="btn "><a href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
-                    {{ category.name }}</a></button>
+                <button type="button" class="btn "><a href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
+                        {{ category.name }}</a></button>
         {% endfor %}
         <div class="row">
             {% for product in products %}
                 <div class="card container mt-5" style="width: 25rem;">
                     <a class="" href="{{ path('products_Details', {id: product.id}) }}">
-                        <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="card-img-top" alt="product_picture">
+                        <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="card-img-top mt-2" alt="product_picture">
 
                         <div class="card-body">
                             <p class="card-text">{{ product.name }}</p>
@@ -20,6 +20,7 @@
                 </div>
             {% else %}
                 <p>Aucun produit pour cette categorie</p>
+
             {% endfor %}
         </div>
     </div>

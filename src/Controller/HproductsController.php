@@ -33,24 +33,7 @@ class HproductsController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/productDetails/{id}", name="Details")
-     * @return Response
-     *
-     * show details of an article
-     */
-    public function show(int $id): Response
-    {
-        $product = $this->getDoctrine()
-            ->getRepository(Products::class)
-            ->find($id);
 
-
-
-        return $this->render('hproducts/productDetails/productDetails.html.twig', [
-            'product' => $product,
-        ]);
-    }
 
     /**
      * @Route("/category/{categoryName}", name="show_category")

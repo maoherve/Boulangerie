@@ -2,8 +2,7 @@
 
 {% block main %}
 
-
-   <div class="productContainer container container-fluid">
+   <div class="tableContainer table-responsive container container-fluid">
       <h2>Nos horaires d'ouvertures:</h2>
 
       {% for timetable in timetables %}
@@ -11,7 +10,6 @@
          <table class="table table-bordered">
             <thead>
             <tr>
-               <th scope="col"></th>
                <th scope="col">lundi</th>
                <th scope="col">Mardi</th>
                <th scope="col">Mercredi</th>
@@ -24,7 +22,6 @@
             </thead>
             <tbody>
             <tr>
-               <th scope="row">Matin</th>
                <td>{{ timetable.close }}</td>
                <td>{{ timetable.morning }}</td>
                <td>{{ timetable.morning }}</td>
@@ -34,7 +31,6 @@
                <td>{{ timetable.morning }}</td>
             </tr>
             <tr>
-               <th scope="row">Après-midi</th>
                <td>{{ timetable.close }}</td>
                <td>{{ timetable.afternoon }}</td>
                <td>{{ timetable.afternoon }}</td>
@@ -52,8 +48,4 @@
       {% endfor %}
    </div>
 
-{% endblock %}
-
-{% block footer %}
-   {% include 'includes/_fixedFooter.html.twig' %}
 {% endblock %}

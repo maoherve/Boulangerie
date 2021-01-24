@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="98c9ee48-c05e-428d-9c2e-71cf4eb877de" name="Default Changelist" comment="" />
+=======
     <list default="true" id="98c9ee48-c05e-428d-9c2e-71cf4eb877de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
@@ -8,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/templates/hproducts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hproducts/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/hproducts/productDetails/productDetails.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/hproducts/productDetails/productDetails.html.twig" afterDir="false" />
     </list>
+>>>>>>> fb72aab952daa38e739da64e4cfd792fe76a97fa
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

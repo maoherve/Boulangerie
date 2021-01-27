@@ -1,26 +1,29 @@
 <div id="carouselExampleCaptions" class="carouselHome carousel slide" data-bs-ride="carousel" data-interval="10000">
 
     <ol class="carousel-indicators">
-        {% for image in carousel %}
-            <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ loop.index-1 }}" class="{{ loop.first ? 'active': '' }}"></li>
-        {% endfor %}
+        {% if carrousel not empty %}
+            {% for image in carousel %}
+                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ loop.index-1 }}" class="{{ loop.first ? 'active': '' }}"></li>
+            {% endfor %}
+        {% endif %}
     </ol>
 
 
     <div class="carousel-inner">
-        {% for image in carousel %}
+        {% if carrousel not empty %}
+            {% for image in carousel %}
 
-            <div class="carousel-item {{ loop.first ? 'active': '' }}">
+                <div class="carousel-item {{ loop.first ? 'active': '' }}">
 
-                <img src="{{ vich_uploader_asset(image, 'imageFile') }}" class="carouselPicture  d-block w-100 h-auto" alt="carousel_picture">
+                    <img src="{{ vich_uploader_asset(image, 'imageFile') }}" class="carouselPicture  d-block w-100 h-auto" alt="carousel_picture">
 
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div>
                 </div>
-            </div>
-        {% endfor %}
-
+            {% endfor %}
+        {% endif %}
     </div>
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

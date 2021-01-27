@@ -1,7 +1,7 @@
 <div id="carouselExampleCaptions" class="carouselHome carousel slide" data-bs-ride="carousel" data-interval="10000">
 
     <ol class="carousel-indicators">
-        {% if carrousel not empty %}
+        {% if carousel is not empty %}
             {% for image in carousel %}
                 <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ loop.index-1 }}" class="{{ loop.first ? 'active': '' }}"></li>
             {% endfor %}
@@ -10,7 +10,7 @@
 
 
     <div class="carousel-inner">
-        {% if carrousel not empty %}
+        {% if carousel is not empty %}
             {% for image in carousel %}
 
                 <div class="carousel-item {{ loop.first ? 'active': '' }}">

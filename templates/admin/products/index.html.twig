@@ -26,7 +26,7 @@
                 <td>{{ product.categories.name }}</td>
                 <td>{{ product.updated ? product.updated|date('d-m-Y H:i') : '' }}</td>
                 <td>
-                    <a href="{{ path('products_edit', {'id': product.id}) }}">edit</a>
+                    <a href="{{ path('admin_products_edit', {'id': product.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -37,5 +37,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('products_new') }}">Create new</a>
+    <a href="{{ path('admin_products_new') }}">Create new</a>
 {% endblock %}

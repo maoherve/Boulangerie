@@ -12,13 +12,14 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/adminproducts")
+ * @Route("/adminProducts", name="admin_products_")
+ *
  * @IsGranted("ROLE_ADMIN")
  */
 class ProductsController extends AbstractController
 {
     /**
-     * @Route("/", name="admin_products_index", methods={"GET"})
+     * @Route("/", name="index", methods={"GET"})
      *
      * CRUD for the products
      */
@@ -30,7 +31,7 @@ class ProductsController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="products_new", methods={"GET","POST"})
+     * @Route("/new", name="new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -54,7 +55,7 @@ class ProductsController extends AbstractController
 
 
     /**
-     * @Route("/{id}/edit", name="products_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Products $product): Response
     {
@@ -74,7 +75,7 @@ class ProductsController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="products_delete", methods={"DELETE"})
+     * @Route("/{id}", name="delete", methods={"DELETE"})
      */
     public function delete(Request $request, Products $product): Response
     {

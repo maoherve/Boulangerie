@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
- * @Route("/adminUser", name="admin_user_")
+ * @Route("/administrationUtilisateurs", name="admin_user_")
  *
  * @IsGranted("ROLE_ADMIN")
  */

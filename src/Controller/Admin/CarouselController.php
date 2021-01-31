@@ -13,7 +13,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
 /**
- * @Route("/adminCarousel", name="admin_")
+ * @Route("/administrationCarousel", name="admin_")
  *
  * @IsGranted("ROLE_ADMIN")
  *

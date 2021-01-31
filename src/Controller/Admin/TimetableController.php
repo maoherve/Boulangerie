@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/adminTimetable", name="admin_timetable_")
+ * @Route("/administrationHoraires", name="admin_timetable_")
  *
  * @IsGranted("ROLE_ADMIN")
  */

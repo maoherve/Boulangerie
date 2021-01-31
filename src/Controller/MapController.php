@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MapController extends AbstractController
 {
     /**
-     * @Route("/map", name="map")
+     * @Route("/plan", name="map")
      */
     public function index(): Response
     {

@@ -2,9 +2,9 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Timetable;
-use App\Form\TimetableType;
-use App\Repository\TimetableRepository;
+use App\Entity\HomeTexte;
+use App\Form\HomeTexteType;
+use App\Repository\HomeTexteRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,19 +12,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/adminTimetable", name="admin_timetable_")
+ * @Route("/adminHomeTexte", name="admin_homeTexte_")
  *
  * @IsGranted("ROLE_ADMIN")
  */
-class TimetableController extends AbstractController
+class HomeTexteController extends AbstractController
 {
     /**
      * @Route("/", name="index", methods={"GET"})
      */
-    public function index(TimetableRepository $timetableRepository): Response
+    public function index(HomeTexteRepository $homeTexteRepository): Response
     {
-        return $this->render('admin/timetable/index.html.twig', [
-            'timetables' => $timetableRepository->findAll(),
+        return $this->render('admin/homeTexte/index.html.twig', [
+            'home_textes' => $homeTexteRepository->findAll(),
         ]);
     }
 
@@ -33,41 +33,42 @@ class TimetableController extends AbstractController
      */
     public function new(Request $request): Response
     {
-        $timetable = new Timetable();
-        $form = $this->createForm(TimetableType::class, $timetable);
+        $homeTexte = new HomeTexte();
+        $form = $this->createForm(HomeTexteType::class, $homeTexte);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($timetable);
+            $entityManager->persist($homeTexte);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_timetable_index');
+            return $this->redirectToRoute('admin_homeTexte_index');
         }
 
-        return $this->render('admin/timetable/new.html.twig', [
-            'timetable' => $timetable,
+        return $this->render('admin/homeTexte/new.html.twig', [
+            'home_texte' => $homeTexte,
             'form' => $form->createView(),
         ]);
     }
 
 
+
     /**
      * @Route("/{id}/edit", name="edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Timetable $timetable): Response
+    public function edit(Request $request, HomeTexte $homeTexte): Response
     {
-        $form = $this->createForm(TimetableType::class, $timetable);
+        $form = $this->createForm(HomeTexteType::class, $homeTexte);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_timetable_index');
+            return $this->redirectToRoute('admin_homeTexte_index');
         }
 
-        return $this->render('admin/timetable/edit.html.twig', [
-            'timetable' => $timetable,
+        return $this->render('admin/homeTexte/edit.html.twig', [
+            'home_texte' => $homeTexte,
             'form' => $form->createView(),
         ]);
     }
@@ -75,14 +76,14 @@ class TimetableController extends AbstractController
     /**
      * @Route("/{id}", name="delete", methods={"DELETE"})
      */
-    public function delete(Request $request, Timetable $timetable): Response
+    public function delete(Request $request, HomeTexte $homeTexte): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$timetable->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete'.$homeTexte->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($timetable);
+            $entityManager->remove($homeTexte);
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_timetable_index');
+        return $this->redirectToRoute('admin_homeTexte_index');
     }
 }

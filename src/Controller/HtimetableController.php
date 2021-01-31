@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HtimetableController extends AbstractController
 {
     /**
-     * @Route("/timetable", name="timetable")
+     * @Route("/horaires", name="timetable")
      */
     public function index(): Response
     {

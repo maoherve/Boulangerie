@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  *
- * @Route("/products", name="products_")
+ * @Route("/produits", name="products_")
  */
 class HproductsController extends AbstractController
 {
@@ -36,7 +36,7 @@ class HproductsController extends AbstractController
 
 
     /**
-     * @Route("/category/{categoryName}", name="show_category")
+     * @Route("/{categoryName}", name="show_category")
      * @param string $categoryName
      * @return Response
      */

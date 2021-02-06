@@ -26,7 +26,7 @@
                 <td>{{ timetable.summerHoliday }}</td>
 
                 <td>
-                    <a href="{{ path('timetable_edit', {'id': timetable.id}) }}">edit</a>
+                    <a href="{{ path('admin_timetable_edit', {'id': timetable.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -37,5 +37,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('timetable_new') }}">Create new</a>
+    <a href="{{ path('admin_timetable_new') }}">Create new</a>
 {% endblock %}

@@ -20,7 +20,7 @@
                 <td>{{ carousel.title }}</td>
                 <td>{{ carousel.imageName }}</td>
                 <td>
-                    <a href="{{ path('carousel_edit', {'id': carousel.id}) }}">edit</a>
+                    <a href="{{ path('admin_carousel_edit', {'id': carousel.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +31,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('carousel_new') }}">Create new</a>
+    <a href="{{ path('admin_carousel_new') }}">Create new</a>
 {% endblock %}

@@ -2,11 +2,14 @@
 
 
 {% block main %}
-    <h1>Edit Carousel</h1>
 
-    {{ include('admin/carousel/_form.html.twig', {'button_label': 'Update'}) }}
+    <div class="container container-fluid mt-5">
+        <h2>Edit Carousel</h2>
+        {{ include('admin/carousel/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('admin_carousel_index') }}">back to list</a>
+        <a href="{{ path('admin_carousel_index') }}">back to list</a>
 
-    {{ include('admin/carousel/_delete_form.html.twig') }}
+        {{ include('admin/carousel/_delete_form.html.twig') }}
+    </div>
+
 {% endblock %}

@@ -13,7 +13,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
 /**
- * @Route("/carousel")
+ * @Route("/administrationCarousel", name="admin_")
+ *
  * @IsGranted("ROLE_ADMIN")
  *
  * CRUD of carousel
@@ -21,7 +22,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 class CarouselController extends AbstractController
 {
     /**
-     * @Route("/", name="admin_carousel_index", methods={"GET"})
+     * @Route("/", name="carousel_index", methods={"GET"})
      */
     public function index(CarouselRepository $carouselRepository): Response
     {

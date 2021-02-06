@@ -10,12 +10,13 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  *
- * @Route("/products", name="products_")
+ * @Route("/produits", name="products_")
  */
 class HproductsController extends AbstractController
 {
     /**
      * @Route("/", name="index")
+     * show all the products
      */
     public function index(): Response
     {
@@ -36,9 +37,10 @@ class HproductsController extends AbstractController
 
 
     /**
-     * @Route("/category/{categoryName}", name="show_category")
+     * @Route("/{categoryName}", name="show_category")
      * @param string $categoryName
      * @return Response
+     * show products by category
      */
     public function showByCategory(string $categoryName):Response
     {

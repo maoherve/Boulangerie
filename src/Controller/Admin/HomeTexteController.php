@@ -2,9 +2,9 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Categories;
-use App\Form\CategoriesType;
-use App\Repository\CategoriesRepository;
+use App\Entity\HomeTexte;
+use App\Form\HomeTexteType;
+use App\Repository\HomeTexteRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,19 +12,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/administrationCategories", name="admin_categories_")
+ * @Route("/administrationAcceuil", name="admin_homeTexte_")
  *
  * @IsGranted("ROLE_ADMIN")
  */
-class CategoriesController extends AbstractController
+class HomeTexteController extends AbstractController
 {
     /**
      * @Route("/", name="index", methods={"GET"})
      */
-    public function index(CategoriesRepository $categoriesRepository): Response
+    public function index(HomeTexteRepository $homeTexteRepository): Response
     {
-        return $this->render('admin/categories/index.html.twig', [
-            'categories' => $categoriesRepository->findAll(),
+        return $this->render('admin/homeTexte/index.html.twig', [
+            'home_textes' => $homeTexteRepository->findAll(),
         ]);
     }
 
@@ -33,41 +33,42 @@ class CategoriesController extends AbstractController
      */
     public function new(Request $request): Response
     {
-        $category = new Categories();
-        $form = $this->createForm(CategoriesType::class, $category);
+        $homeTexte = new HomeTexte();
+        $form = $this->createForm(HomeTexteType::class, $homeTexte);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($category);
+            $entityManager->persist($homeTexte);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_categories_index');
+            return $this->redirectToRoute('admin_homeTexte_index');
         }
 
-        return $this->render('admin/categories/new.html.twig', [
-            'category' => $category,
+        return $this->render('admin/homeTexte/new.html.twig', [
+            'home_texte' => $homeTexte,
             'form' => $form->createView(),
         ]);
     }
 
 
+
     /**
      * @Route("/{id}/edit", name="edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Categories $category): Response
+    public function edit(Request $request, HomeTexte $homeTexte): Response
     {
-        $form = $this->createForm(CategoriesType::class, $category);
+        $form = $this->createForm(HomeTexteType::class, $homeTexte);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('admin_categories_index');
+            return $this->redirectToRoute('admin_homeTexte_index');
         }
 
-        return $this->render('admin/categories/edit.html.twig', [
-            'category' => $category,
+        return $this->render('admin/homeTexte/edit.html.twig', [
+            'home_texte' => $homeTexte,
             'form' => $form->createView(),
         ]);
     }
@@ -75,14 +76,14 @@ class CategoriesController extends AbstractController
     /**
      * @Route("/{id}", name="delete", methods={"DELETE"})
      */
-    public function delete(Request $request, Categories $category): Response
+    public function delete(Request $request, HomeTexte $homeTexte): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$category->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete'.$homeTexte->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($category);
+            $entityManager->remove($homeTexte);
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('admin_categories_index');
+        return $this->redirectToRoute('admin_homeTexte_index');
     }
 }

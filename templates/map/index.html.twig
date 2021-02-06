@@ -8,7 +8,7 @@
         <p>2 quai Auguste Mahaut, 18320 Marseilles-lès-aubigny</p>
 
         <div id="maCarte" class="mb-3">
-            <!-- Ici s'affichera la carte -->
+            <!-- view of the map here -->
         </div>
     </div>
 
@@ -24,7 +24,7 @@
             // we initialise the map
             var carte = L.map('maCarte').setView([47.0675000, 3.0151000], 17);
 
-            // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
+            // Leaflet don't recovers tiles on default server, we need to show the path. Here openstreetmap.fr
             L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
 
                 // link for source

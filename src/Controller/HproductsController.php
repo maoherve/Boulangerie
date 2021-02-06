@@ -16,6 +16,7 @@ class HproductsController extends AbstractController
 {
     /**
      * @Route("/", name="index")
+     * show all the products
      */
     public function index(): Response
     {
@@ -39,6 +40,7 @@ class HproductsController extends AbstractController
      * @Route("/{categoryName}", name="show_category")
      * @param string $categoryName
      * @return Response
+     * show products by category
      */
     public function showByCategory(string $categoryName):Response
     {

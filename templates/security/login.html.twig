@@ -4,10 +4,12 @@
 
 {% block main %}
 <form method="post" class="container container-fluid mt-5">
+    <!-- error message if login of password wrong  -->
     {% if error %}
         <div class="alert alert-danger mt-5">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
+    <!-- if log tel the username  -->
     {% if app.user %}
         <div class="mb-3">
             You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>

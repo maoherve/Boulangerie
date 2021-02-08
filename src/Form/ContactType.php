@@ -15,6 +15,7 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('Demande', TextType::class)
+            ->add('Nom', TextType::class)
             ->add('Numero',NumberType::class, [
                 'label' => 'Votre numéro'
             ])

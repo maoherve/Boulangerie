@@ -2,6 +2,11 @@
 
 
 {% block main %}
+    {% for message in app.flashes('message') %}
+        <div class="alert alert-success mt-5" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
 
     <div class="mapContainer container container-fluid">
         <h2>Adresse Marseilles-lès-aubigny.</h2>

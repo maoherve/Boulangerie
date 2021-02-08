@@ -36,6 +36,7 @@ class MapController extends AbstractController
                 ->htmlTemplate('emails/contact.html.twig')
                 ->context([
                     'Demande' => $contact->get('Demande')->getData(),
+                    'Nom' => $contact->get('Nom')->getData(),
                     'Numero' => $contact->get('Numero')->getData(),
                     'Mail' => $contact->get('Email')->getData(),
                     'Message' => $contact->get('Message')->getData()

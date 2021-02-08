@@ -17,14 +17,15 @@
                         <span class="footer-title">Contact pro</span>
                     </li>
                     <li class="nav-item">
-
                         <!-- Button trigger modal -->
                         <button type="button" class="btnModal btn" data-bs-toggle="modal" data-bs-target="#modal-contact">
                             Demande
                         </button>
 
+
+
                         <!-- Modal -->
-                        <div class="modal fade" id="modal-contact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="modal-contact" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -32,18 +33,28 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        ...
+                                        {{ form_start(form) }}
+
+
+                                        {{ form_row(form.Demande) }}
+                                        {{ form_row(form.Numero) }}
+                                        {{ form_row(form.Email) }}
+                                        {{ form_row(form.Message) }}
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button class="btn btn-primary">Envoyer</button>
                                     </div>
+                                    {{ form_end(form) }}
                                 </div>
                             </div>
                         </div>
-                    </li>
 
+                    </li>
                 </ul>
+
+
+
+
             </div>
             <div class="col-md-4 footer-column">
                 <ul class="ulFooter nav flex-column">

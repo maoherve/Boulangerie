@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
@@ -22,7 +23,7 @@ class ContactType extends AbstractType
             ->add('Email', EmailType::class, [
                 'label' => 'Votre e-mail'
             ])
-            ->add('Message', TextType::class, [
+            ->add('Message', CKEditorType::class, [
                 'label' => 'Votre message'
             ])
         ;

@@ -9,6 +9,7 @@ use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
@@ -50,16 +51,17 @@ class HproductsController extends AbstractController
                 ->htmlTemplate('emails/contact.html.twig')
                 ->context([
                     'Demande' => $contact->get('Demande')->getData(),
+                    'Nom' => $contact->get('Nom')->getData(),
                     'Numero' => $contact->get('Numero')->getData(),
-                    'mail' => $contact->get('Email')->getData(),
-                    'message' => $contact->get('Message')->getData()
+                    'Mail' => $contact->get('Email')->getData(),
+                    'Message' => $contact->get('Message')->getData()
                 ]);
             // We send the mail
             $mailer->send($email);
 
             // confirm and redirect
             $this->addFlash('message', 'Votre e-mail a bien été envoyé');
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('products_index');
         }
 
 
@@ -77,6 +79,7 @@ class HproductsController extends AbstractController
      * @param Request $request
      * @param MailerInterface $mailer
      * @return Response
+     * @throws TransportExceptionInterface
      * show products by category
      */
     public function showByCategory(string $categoryName, Request $request, MailerInterface $mailer):Response
@@ -104,6 +107,7 @@ class HproductsController extends AbstractController
                 ->htmlTemplate('emails/contact.html.twig')
                 ->context([
                     'Demande' => $contact->get('Demande')->getData(),
+                    'Nom' => $contact->get('Nom')->getData(),
                     'Numero' => $contact->get('Numero')->getData(),
                     'Mail' => $contact->get('Email')->getData(),
                     'Message' => $contact->get('Message')->getData()
@@ -113,7 +117,7 @@ class HproductsController extends AbstractController
 
             // confirm and redirect
             $this->addFlash('message', 'Votre e-mail a bien été envoyé');
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('products_index');
         }
 
         return $this->render("hproducts/category.html.twig",

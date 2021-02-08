@@ -34,3 +34,8 @@
         <span class="visually-hidden">Next</span>
     </a>
 </div>
+{% for message in app.flashes('message') %}
+    <div class="alert alert-success mt-5" role="alert">
+        {{ message }}
+    </div>
+{% endfor %}

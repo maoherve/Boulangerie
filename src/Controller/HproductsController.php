@@ -4,14 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Categories;
 use App\Entity\Products;
-use App\Form\ContactType;
-use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
-use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -23,11 +17,9 @@ class HproductsController extends AbstractController
     /**
      * @Route("/", name="index")
      * show all the products
-     * @param Request $request
-     * @param MailerInterface $mailer
      * @return Response
      */
-    public function index(Request $request, MailerInterface $mailer): Response
+    public function index(): Response
     {
         $products = $this->getDoctrine()
             ->getRepository(Products::class)
@@ -37,38 +29,8 @@ class HproductsController extends AbstractController
             ->getRepository(Categories::class)
             ->findAll();
 
-
-
-        $form = $this->createForm(ContactType::class);
-        $contact = $form->handleRequest($request);
-
-        if($form->isSubmitted() && $form->isValid()){
-            // We created mail
-            $email = (new TemplatedEmail())
-                ->from($contact->get('Email')->getData())
-                ->to(new Address('maoherve8@gmail.com'))
-                ->subject('Commande client.')
-                ->htmlTemplate('emails/contact.html.twig')
-                ->context([
-                    'Demande' => $contact->get('Demande')->getData(),
-                    'Nom' => $contact->get('Nom')->getData(),
-                    'Numero' => $contact->get('Numero')->getData(),
-                    'Mail' => $contact->get('Email')->getData(),
-                    'Message' => $contact->get('Message')->getData()
-                ]);
-            // We send the mail
-            $mailer->send($email);
-
-            // confirm and redirect
-            $this->addFlash('message', 'Votre e-mail a bien été envoyé');
-            return $this->redirectToRoute('products_index');
-        }
-
-
         return $this->render('hproducts/index.html.twig', [
             'products' => $products, 'categories' => $categories,
-            'form' => $form->createView(),
-
         ]);
     }
 
@@ -76,13 +38,10 @@ class HproductsController extends AbstractController
     /**
      * @Route("/{categoryName}", name="show_category")
      * @param string $categoryName
-     * @param Request $request
-     * @param MailerInterface $mailer
      * @return Response
-     * @throws TransportExceptionInterface
      * show products by category
      */
-    public function showByCategory(string $categoryName, Request $request, MailerInterface $mailer):Response
+    public function showByCategory(string $categoryName):Response
     {
         $category = $this->getDoctrine()->getRepository(Categories::class)
             ->findOneBy(['name' => $categoryName]);
@@ -95,35 +54,9 @@ class HproductsController extends AbstractController
             ->findAll();
 
 
-        $form = $this->createForm(ContactType::class);
-        $contact = $form->handleRequest($request);
-
-        if($form->isSubmitted() && $form->isValid()){
-            // create mail
-            $email = (new TemplatedEmail())
-                ->from($contact->get('Email')->getData())
-                ->to(new Address('maoherve8@gmail.com'))
-                ->subject('Commande client.')
-                ->htmlTemplate('emails/contact.html.twig')
-                ->context([
-                    'Demande' => $contact->get('Demande')->getData(),
-                    'Nom' => $contact->get('Nom')->getData(),
-                    'Numero' => $contact->get('Numero')->getData(),
-                    'Mail' => $contact->get('Email')->getData(),
-                    'Message' => $contact->get('Message')->getData()
-                ]);
-            // send mail
-            $mailer->send($email);
-
-            // confirm and redirect
-            $this->addFlash('message', 'Votre e-mail a bien été envoyé');
-            return $this->redirectToRoute('products_index');
-        }
-
         return $this->render("hproducts/category.html.twig",
             ['products' => $products,
                 'categories' => $categories,
-                'form' => $form->createView(),
             ]);
     }
 }

@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer id="bottom-footer" class="footer">
     <div class="footerContainer container">
         <div class="row">
             <div class="col-md-4 footer-column">
@@ -12,50 +12,13 @@
                 </ul>
             </div>
             <div class="col-md-4 footer-column">
-                <ul class="ulFooter nav flex-column">
-                    <li class="nav-item">
-                        <span class="footer-title">Contact pro</span>
-                    </li>
-                    <li class="nav-item">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btnModal btn" data-bs-toggle="modal" data-bs-target="#modal-contact">
-                            Demande
-                        </button>
-
-
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="modal-contact" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Contacter</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        {{ form_start(form) }}
-
-
-                                        {{ form_row(form.Demande) }}
-                                        {{ form_row(form.Nom) }}
-                                        {{ form_row(form.Numero) }}
-                                        {{ form_row(form.Email) }}
-                                        {{ form_row(form.Message) }}
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-primary">Envoyer</button>
-                                    </div>
-                                    {{ form_end(form) }}
-                                </div>
-                            </div>
-                        </div>
-
+                <ul class="ulFooter nav flex-column list-inline social-buttons">
+                    <li class="nav-item list-inline-item">
+                        <a class="linkFooter text-center" href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
                     </li>
                 </ul>
-
-
-
-
             </div>
             <div class="col-md-4 footer-column">
                 <ul class="ulFooter nav flex-column">
@@ -74,21 +37,6 @@
         </div>
 
 
-        <div class="row text-center">
-            <div class="col-md-4 box">
-        <span class="copyright quick-links">Copyright &copy; MaoMater <script>document.write(new Date().getFullYear())</script>
-        </span>
-            </div>
-            <div class="col-md-4 box">
-                <ul class="ulFooter list-inline social-buttons">
-                    <li class="list-inline-item">
-                        <a class="linkFooter" href="#">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
 
-        </div>
     </div>
 </footer>

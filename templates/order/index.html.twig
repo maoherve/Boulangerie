@@ -1,0 +1,23 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block main %}
+    <div class="orderContainer container container-fluid">
+        <div class="form-control mb-5">
+            {{ form_start(form) }}
+                {{ form_row(form.Demande) }}
+                {{ form_row(form.Nom) }}
+                {{ form_row(form.Numero) }}
+                {{ form_row(form.Email) }}
+                {{ form_row(form.Message) }}
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Envoyer</button>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include 'includes/_fixedFooter.html.twig' %}
+{% endblock %}

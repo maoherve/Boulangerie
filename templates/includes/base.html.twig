@@ -18,22 +18,25 @@
     </head>
 
     <body>
-        {% block header %}
-        {% endblock header %}
+        <div id="page-container">
 
-        {% block main %}
-        {% endblock main %}
+            {% block header %}
+            {% endblock header %}
 
-        {% block footer %}
-        {% endblock footer %}
+            {% block main %}
+            {% endblock main %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+            {% block footer %}
+            {% endblock footer %}
 
-            <script>
-                let modal = new Modal('#modal-contact');
-            </script>
-        {% endblock javascripts %}
+            {% block javascripts %}
+                {{ encore_entry_script_tags('app') }}
+
+                <script>
+                    let modal = new Modal('#modal-contact');
+                </script>
+            {% endblock javascripts %}
+        </div>
     </body>
 </html>
 

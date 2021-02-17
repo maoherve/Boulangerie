@@ -18,13 +18,13 @@ class ContactType extends AbstractType
             ->add('Demande', TextType::class)
             ->add('Nom', TextType::class)
             ->add('Numero',NumberType::class, [
-                'label' => 'Votre numéro'
+                'label' => 'Numéro'
             ])
             ->add('Email', EmailType::class, [
-                'label' => 'Votre e-mail'
+                'label' => 'E-mail'
             ])
             ->add('Message', CKEditorType::class, [
-                'label' => 'Votre message'
+                'label' => 'Message'
             ])
         ;
     }

@@ -20,7 +20,6 @@ class HtimetableController extends AbstractController
             ->getRepository(Timetable::class)
             ->findAll();
 
-
         return $this->render('Htimetable/index.html.twig', [
             'timetables' => $timetables,
             ])

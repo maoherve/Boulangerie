@@ -5,10 +5,23 @@
     <div class="orderContainer container container-fluid">
         <div class="form-control mb-5">
             {{ form_start(form) }}
-                {{ form_row(form.Demande) }}
-                {{ form_row(form.Nom) }}
-                {{ form_row(form.Numero) }}
-                {{ form_row(form.Email) }}
+            <div class="row justify-content-between mb-4 mt-3">
+                <div class="col">
+                    {{ form_row(form.Demande) }}
+                </div>
+
+                <div class="col" id="some-custom-id">
+                    {{ form_row(form.Nom) }}
+                </div>
+
+                <div class="col" id="some-custom-id">
+                    {{ form_row(form.Numero) }}
+                </div>
+
+                <div class="col" id="some-custom-id">
+                    {{ form_row(form.Email) }}
+                </div>
+            </div>
                 {{ form_row(form.Message) }}
                 <div class="modal-footer">
                     <button class="btn btn-primary">Envoyer</button>

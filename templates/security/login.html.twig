@@ -4,6 +4,8 @@
 
 {% block main %}
 <form method="post" class="container container-fluid mt-5">
+
+    <h2 class="titleLogin h3 mb-3 font-weight-normal">Connectez vous !</h2>
     <!-- error message if login of password wrong  -->
     {% if error %}
         <div class="alert alert-danger mt-5">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -12,11 +14,9 @@
     <!-- if log tel the username  -->
     {% if app.user %}
         <div class="mb-3">
-            Vous etes connecter en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
+            Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
         </div>
     {% endif %}
-
-    <h2 class="titleLogin h3 mb-3 font-weight-normal">Connectez vous !</h2>
     <label for="inputUsername">Nom d'utilisateur</label>
     <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" required autofocus>
     <label for="inputPassword">Mot de passe</label>
@@ -36,7 +36,7 @@
         </div>
     #}
 
-    <button class="btn btn-lg btn-primary" type="submit">
+    <button class="btn btn-lg btn-primary mt-3" type="submit">
         connexion
     </button>
 </form>

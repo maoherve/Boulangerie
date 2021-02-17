@@ -8,7 +8,6 @@ fos_ck_editor:
         main_config:
             toolbar:
                 - { name: "styles", items: ['Bold', 'Italic', 'Underline', '-',
-                'Link', '-','RemoveFormat', '-', 'NumberedList',
-                'BulletedList', '-', 'Indent', '-','JustifyLeft',
+                'BulletedList', '-','JustifyLeft',
                 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-',
-                '-', 'Styles', 'Format','Font','FontSize', '-', 'TextColor', 'BGColor'] }
+                '-', 'Font','FontSize', '-', 'TextColor'] }

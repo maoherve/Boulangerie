@@ -1,5 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
-@import "carousel";
+@import "homepage";
 @import "admin";
 @import "footer";
 @import "products";
@@ -17,7 +17,7 @@ media for footer placement correctly in desktop mod
         min-height: 100%;
     }
     body {
-        margin: 0 0 100px; /* bottom = footer height */
+        margin: 0 0 100px;
     }
 
     #bottom-footer {
@@ -33,3 +33,31 @@ a {
     text-decoration: none !important;
     color: black;
 }
+
+
+
+
+/*
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-top: 20px;
+}
+
+/* Custom page footer
+.footer {
+    bottom: 0;
+    /* Set the fixed height of the footer here*/ /*
+}
+
+.container-fluid {
+    max-width: 1550px;
+}
+
+.wrap{
+    position: relative;
+    min-height: 100%;
+}*/

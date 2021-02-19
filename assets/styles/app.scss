@@ -1,14 +1,30 @@
 @import "~bootstrap/scss/bootstrap";
-@import "carousel";
+@import "homepage";
 @import "admin";
 @import "footer";
 @import "products";
 @import "timetable";
 @import "map";
+@import "order";
+@import "variable";
 
-.homeContainer {
-}
-a {
-    text-decoration: none !important;
-    color: black;
+
+/*
+media for footer placement correctly in desktop mod
+ */
+@media screen and (min-width: 768px) {
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+    body {
+        margin: 0 0 100px;
+    }
+
+    #bottom-footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
 }

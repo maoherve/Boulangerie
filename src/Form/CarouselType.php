@@ -15,7 +15,6 @@ class CarouselType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('description')
             ->add('imageName', TextType::class, ['label' => 'Nom de l\'image'])
             ->add('imageFile', VichFileType::class, [
                 'required' => false,

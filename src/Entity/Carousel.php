@@ -41,13 +41,6 @@ class Carousel
      */
     private $title;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $description;
-
-
-
 
 
 
@@ -116,18 +109,4 @@ class Carousel
 
         return $this;
     }
-
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(?string $description): self
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-
 }

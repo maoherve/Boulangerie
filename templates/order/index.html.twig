@@ -1,0 +1,33 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block main %}
+    <div class="orderContainer container container-fluid ">
+        <div class="form-control">
+            {{ form_start(form) }}
+
+            <div class="row justify-content-center mb-4 mt-3">
+                <div class="col-auto mt-3">
+                    {{ form_row(form.Demande) }}
+                </div>
+
+                <div class="col-auto mt-3">
+                    {{ form_row(form.Nom) }}
+                </div>
+
+                <div class="col-auto mt-3">
+                    {{ form_row(form.Numero) }}
+                </div>
+
+                <div class="col-auto mt-3">
+                    {{ form_row(form.Email) }}
+                </div>
+            </div>
+                {{ form_row(form.Message) }}
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Envoyer</button>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

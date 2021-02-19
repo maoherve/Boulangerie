@@ -1,9 +1,9 @@
-<div id="carouselExampleCaptions" class="carouselHome carousel slide" data-bs-ride="carousel" data-interval="10000">
+<div id="carouselBoulangerie" class="carouselHome carousel slide" data-bs-ride="carousel" data-interval="10000">
 
     <ol class="carousel-indicators">
         {% if carousel is not empty %}
             {% for image in carousel %}
-                <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ loop.index-1 }}" class="{{ loop.first ? 'active': '' }}"></li>
+                <li data-bs-target="#carouselBoulangerie" data-bs-slide-to="{{ loop.index-1 }}" class="{{ loop.first ? 'active': '' }}"></li>
             {% endfor %}
         {% endif %}
     </ol>
@@ -17,25 +17,24 @@
 
                     <img src="{{ vich_uploader_asset(image, 'imageFile') }}" class="carouselPicture  d-block w-100 h-auto" alt="carousel_picture">
 
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </div>
+                    <!--<div class="carousel-caption d-none d-md-block">
+                        <h3> image.title </h3>
+                    </div>-->
                 </div>
             {% endfor %}
         {% endif %}
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+    <a class="carousel-control-prev" href="#carouselBoulangerie" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="visually-hidden">Précédent</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+    <a class="carousel-control-next" href="#carouselBoulangerie" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="visually-hidden">Suivant</span>
     </a>
 </div>
 {% for message in app.flashes('message') %}
-    <div class="alert alert-success mt-5" role="alert">
+    <div class="alert alert-success" role="alert">
         {{ message }}
     </div>
 {% endfor %}

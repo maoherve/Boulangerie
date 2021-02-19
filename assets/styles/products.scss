@@ -1,14 +1,9 @@
-.productContainer {
-  margin-top: 150px;
-}
+@import "variable";
 
-.productDetail{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: stretch;
-  align-content: stretch;
+
+.productContainer {
+  margin-top: $margingXLarge;
+  padding-bottom: $paddingLarge;
 }
 
 .productDetailPicture {
@@ -24,7 +19,7 @@
 }
 
 .productDetailInformations {
-  margin-top: 50px;
+  margin-top: $margingSmall;
 }
 
 

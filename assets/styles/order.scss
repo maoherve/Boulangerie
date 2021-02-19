@@ -1,5 +1,6 @@
+@import "variable";
 
 .orderContainer {
-  margin-top: 100px;
-  padding-bottom: 100px;
+  margin-top: $margingLarge;
+  padding-bottom: $paddingLarge;
 }

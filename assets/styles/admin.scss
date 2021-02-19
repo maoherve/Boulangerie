@@ -1,5 +1,7 @@
+@import "variable";
+
 .titleLogin {
-  margin-top: 150px;
+  margin-top: $margingXLarge;
 }
 
 @media screen and (max-width: 800px) {

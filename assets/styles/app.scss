@@ -6,6 +6,7 @@
 @import "timetable";
 @import "map";
 @import "order";
+@import "variable";
 
 
 /*
@@ -27,37 +28,3 @@ media for footer placement correctly in desktop mod
         width: 100%;
     }
 }
-
-
-a {
-    text-decoration: none !important;
-    color: black;
-}
-
-
-
-
-/*
-html{
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    padding-top: 20px;
-}
-
-/* Custom page footer
-.footer {
-    bottom: 0;
-    /* Set the fixed height of the footer here*/ /*
-}
-
-.container-fluid {
-    max-width: 1550px;
-}
-
-.wrap{
-    position: relative;
-    min-height: 100%;
-}*/

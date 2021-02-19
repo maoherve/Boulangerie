@@ -1,5 +1,9 @@
+@import "variable";
+
+
 .productContainer {
-  margin-top: 150px;
+  margin-top: $margingXLarge;
+  padding-bottom: $paddingLarge;
 }
 
 .productDetailPicture {
@@ -15,7 +19,7 @@
 }
 
 .productDetailInformations {
-  margin-top: 50px;
+  margin-top: $margingSmall;
 }
 
 

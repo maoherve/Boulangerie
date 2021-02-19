@@ -1,13 +1,13 @@
-
+@import "variable";
 
 .homeContainer {
-  margin-bottom: 30px;
-  padding-bottom: 100px;
+  margin-top: $margingSmall;
+  padding-bottom: $paddingLarge;
 }
 
 
 @media screen and (max-width: 1000px) {
   .carouselPicture {
-    margin-top: 60px;
+    margin-top: $margingSmall;
   }
 }

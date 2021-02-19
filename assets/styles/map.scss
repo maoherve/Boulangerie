@@ -1,6 +1,8 @@
+@import "variable";
+
 .mapContainer {
-  margin-top: 100px;
-  padding-bottom: 100px;
+  margin-top: $margingLarge;
+  padding-bottom: $paddingLarge;
 }
 
 /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */

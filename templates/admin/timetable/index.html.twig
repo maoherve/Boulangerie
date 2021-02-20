@@ -1,41 +1,44 @@
 {% extends 'adminLayout.html.twig' %}
 
 {% block main %}
-    <h2>Timetable index</h2>
+    <div class="adminContainer container container-fluid">
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Morning</th>
-                <th>Afternoon</th>
-                <th>Close</th>
-                <th>winter Holiday</th>
-                <th>summer Holiday</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for timetable in timetables %}
-            <tr>
-                <td>{{ timetable.id }}</td>
-                <td>{{ timetable.morning }}</td>
-                <td>{{ timetable.afternoon }}</td>
-                <td>{{ timetable.close }}</td>
-                <td>{{ timetable.winterHoliday }}</td>
-                <td>{{ timetable.summerHoliday }}</td>
+        <h2>Timetable index</h2>
 
-                <td>
-                    <a href="{{ path('admin_timetable_edit', {'id': timetable.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Morning</th>
+                        <th>Afternoon</th>
+                        <th>Close</th>
+                        <th>winter Holiday</th>
+                        <th>summer Holiday</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for timetable in timetables %}
+                    <tr>
+                        <td>{{ timetable.id }}</td>
+                        <td>{{ timetable.morning }}</td>
+                        <td>{{ timetable.afternoon }}</td>
+                        <td>{{ timetable.close }}</td>
+                        <td>{{ timetable.winterHoliday }}</td>
+                        <td>{{ timetable.summerHoliday }}</td>
 
-    <a href="{{ path('admin_timetable_new') }}">Create new</a>
+                        <td>
+                            <a href="{{ path('admin_timetable_edit', {'id': timetable.id}) }}">edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="6">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <a href="{{ path('admin_timetable_new') }}">Create new</a>
+    </div>
 {% endblock %}

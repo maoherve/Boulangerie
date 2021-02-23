@@ -7,10 +7,15 @@
         </div>
     {% endfor %}
     <div class="productContainer container container-fluid mb-5">
-        {% for category in categories %}
-                <button type="button" class="btn "><a href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
-                        {{ category.name }}</a></button>
-        {% endfor %}
+
+        <div class=" container container-fluid justify-content-center row">
+            {% for category in categories %}
+                <a class="btnProduct btn m-3 col-auto" href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
+                    {{ category.name }}
+                </a>
+            {% endfor %}
+        </div>
+
         <div class="row">
             {% for product in products %}
                 <div class="card container mt-5" style="width: 25rem;">

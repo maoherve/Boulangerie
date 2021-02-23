@@ -2,9 +2,11 @@
 
 
 {% block main %}
-    <h1>Create new Carousel</h1>
+    <div class="adminContainer container container-fluid">
+        <h1>Create new Carousel</h1>
 
-    {{ include('admin/carousel/_form.html.twig') }}
+            {{ include('admin/carousel/_form.html.twig') }}
 
-    <a href="{{ path('admin_carousel_index') }}">back to list</a>
+            <a href="{{ path('admin_carousel_index') }}">back to list</a>
+    </div>
 {% endblock %}

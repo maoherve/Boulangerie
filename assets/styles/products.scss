@@ -1,5 +1,18 @@
 @import "variable";
 
+.btnProduct {
+  background-color: $main-color;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 1s;
+
+  min-width: 129px;
+}
+.btnProduct:hover {
+  background-color: #6c757d;
+}
+
 
 .productContainer {
   margin-top: $margingXLarge;

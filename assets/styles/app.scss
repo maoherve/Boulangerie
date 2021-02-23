@@ -7,6 +7,7 @@
 @import "map";
 @import "order";
 @import "variable";
+@import "navbar";
 
 
 /*
@@ -27,4 +28,8 @@ media for footer placement correctly in desktop mod
         bottom: 0;
         width: 100%;
     }
+}
+
+body {
+    background-color: $background-color;
 }

@@ -1,8 +1,9 @@
 @import "variable";
 
-.titleLogin {
+.titleLogin, .adminContainer {
   margin-top: $margingXLarge;
 }
+
 
 @media screen and (max-width: 800px) {
   .adminContainer {

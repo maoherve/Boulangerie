@@ -3,14 +3,14 @@
 {% block main %}
     <div class="adminContainer container container-fluid">
 
-        <h1>User index</h1>
+        <h1>Menu des utilisateurs :</h1>
 
             <table class="table">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Username</th>
-                        <th>Roles</th>
+                        <th>Utilisateur</th>
+                        <th>Rôles</th>
                         <th>Password</th>
                         <th>actions</th>
                     </tr>
@@ -28,12 +28,12 @@
                     </tr>
                 {% else %}
                     <tr>
-                        <td colspan="5">no records found</td>
+                        <td colspan="5">Pas d'utilisateur disponible !</td>
                     </tr>
                 {% endfor %}
                 </tbody>
             </table>
 
-            <a href="{{ path('admin_user_new') }}">Create new</a>
+            <a href="{{ path('admin_user_new') }}">Créer un nouvel utilisateur !</a>
     </div>
 {% endblock %}

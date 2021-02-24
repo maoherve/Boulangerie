@@ -4,14 +4,14 @@
 {% block main %}
 
     <div class="adminContainer container container-fluid">
-        <h2>Carousel index</h2>
+        <h2>Menu des images du carousel :</h2>
 
             <table class="table">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Title</th>
-                        <th>Poster</th>
+                        <th>Titre</th>
+                        <th>Image</th>
                         <th>actions</th>
                     </tr>
                 </thead>
@@ -27,12 +27,12 @@
                     </tr>
                 {% else %}
                     <tr>
-                        <td colspan="3">no records found</td>
+                        <td colspan="3">Pas de carouseul disponible !</td>
                     </tr>
                 {% endfor %}
                 </tbody>
             </table>
 
-            <a href="{{ path('admin_carousel_new') }}">Create new</a>
+            <a href="{{ path('admin_carousel_new') }}">Créer une nouvelle image du carousel !</a>
     </div>
 {% endblock %}

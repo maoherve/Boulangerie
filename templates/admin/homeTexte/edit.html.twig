@@ -3,11 +3,11 @@
 
 {% block main %}
     <div class="adminContainer container container-fluid">
-        <h1>Edit HomeTexte</h1>
+        <h1>Modifier le texte de la page d'acceuil :</h1>
 
-        {{ include('admin/homeTexte/_form.html.twig', {'button_label': 'Update'}) }}
+        {{ include('admin/homeTexte/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-        <a href="{{ path('admin_homeTexte_index') }}">back to list</a>
+        <a href="{{ path('admin_homeTexte_index') }}">Retour à la liste.</a>
 
         {{ include('admin/homeTexte/_delete_form.html.twig') }}
     </div>

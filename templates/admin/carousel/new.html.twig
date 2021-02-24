@@ -3,10 +3,10 @@
 
 {% block main %}
     <div class="adminContainer container container-fluid">
-        <h1>Create new Carousel</h1>
+        <h2>Créer une nouvelle image du carousel :</h2>
 
             {{ include('admin/carousel/_form.html.twig') }}
 
-            <a href="{{ path('admin_carousel_index') }}">back to list</a>
+            <a href="{{ path('admin_carousel_index') }}">Retour à la liste.</a>
     </div>
 {% endblock %}

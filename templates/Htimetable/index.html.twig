@@ -7,40 +7,8 @@
 
       {% for timetable in timetables %}
 
-         <table class="timeTable table table-bordered text-center">
-            <thead>
-            <tr>
-               <th scope="col">Lundi</th>
-               <th scope="col">Mardi</th>
-               <th scope="col">Mercredi</th>
-               <th scope="col">Jeudi</th>
-               <th scope="col">Vendredi</th>
-               <th scope="col">Samedi</th>
-               <th scope="col">Dimanche</th>
-
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-               <td>{{ timetable.close }}</td>
-               <td>{{ timetable.morning }}</td>
-               <td>{{ timetable.morning }}</td>
-               <td>{{ timetable.morning }}</td>
-               <td>{{ timetable.morning }}</td>
-               <td>{{ timetable.morning }}</td>
-               <td>{{ timetable.morning }}</td>
-            </tr>
-            <tr>
-               <td>{{ timetable.close }}</td>
-               <td>{{ timetable.afternoon }}</td>
-               <td>{{ timetable.afternoon }}</td>
-               <td>{{ timetable.afternoon }}</td>
-               <td>{{ timetable.afternoon }}</td>
-               <td>{{ timetable.afternoon }}</td>
-               <td>{{ timetable.close }}</td>
-            </tr>
-            </tbody>
-         </table>
+          <p>Ouvert du mardi au dimanche de {{ timetable.morning }}.</p>
+          <p>Et du mercredi au samedi de {{ timetable.afternoon }}.</p>
 
          <h2 class="mt-5">Congés annuels:</h2>
          <p>{{ timetable.winterHoliday }}</p>

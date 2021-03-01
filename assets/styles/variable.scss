@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Josefin+Slab&display=swap');
 
+$paddingXLarge : 150px;
 $paddingLarge : 100px;
 $paddingSmall : 50px;
 
@@ -25,7 +26,7 @@ h1, H2, H3 {
   font-family: 'Josefin Slab', serif;
 }
 
-p ,a ,span, li, ul {
+p ,a ,span, li, ul, label {
   font-size: 20px;
   font-family: 'Advent Pro', sans-serif;
 }
@@ -38,4 +39,8 @@ a:hover
 {
   text-decoration:none;
   cursor:pointer;
+}
+
+.btn {
+  background-color: $main-color ;
 }

@@ -23,7 +23,8 @@ class HproductsController extends AbstractController
     {
         $products = $this->getDoctrine()
             ->getRepository(Products::class)
-            ->findAll();
+            ->findProductsByASC();
+
 
         $categories = $this->getDoctrine()
             ->getRepository(Categories::class)
@@ -46,7 +47,7 @@ class HproductsController extends AbstractController
         $category = $this->getDoctrine()->getRepository(Categories::class)
             ->findOneBy(['name' => $categoryName]);
         $products = $this->getDoctrine()->getRepository(Products::class)
-            ->findBy(['categories' => $category],['id'=>'DESC']);
+            ->findBy(['categories' => $category],['name'=>'ASC']);
 
 
         $categories = $this->getDoctrine()

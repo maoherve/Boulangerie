@@ -10,7 +10,7 @@
   min-width: 129px;
 }
 .btnProduct:hover {
-  background-color: #6c757d;
+  background-color: $secondary-color;
 }
 
 
@@ -35,6 +35,9 @@
   margin-top: $margingSmall;
 }
 
+.productCard {
+  background-color: $secondary-color;
+}
 
 @media screen and (max-width: 800px) {
   .productDetail {

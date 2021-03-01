@@ -1,6 +1,7 @@
-$link-light-grey: #6c757d;
+@import "variable";
+
+$link-light-grey: $police-color;
 $primary-orange: #fec503;
-$footer-background-grey: #1a1d20;
 
 
 .linkFooter {
@@ -13,8 +14,8 @@ $footer-background-grey: #1a1d20;
 
 
 footer {
-  padding: 2rem 0;
-  background-color: #212529;
+  padding: 1rem 0;
+  background-color: #986c42;
 }
 
 
@@ -22,7 +23,7 @@ footer {
   text-align: center;
   .nav-item {
     .nav-link {
-      padding: 0.1rem 0;
+      padding: 0.2rem 0;
     }
     span.nav-link {
       color: $link-light-grey;
@@ -30,12 +31,10 @@ footer {
     span.footer-title {
       font-size: 14px;
       font-weight: 700;
-      color: #fff;
+      color: $police-color-light;
       text-transform: uppercase;
     }
-    .fas {
-      margin-right: 0.5rem;
-    }
+
   }
   .ulFooter {
     display: inline-block;
@@ -57,19 +56,20 @@ footer {
 
 .ulFooter.social-buttons li a {
   font-size: 20px;
-  line-height: 40px;
+  line-height: 28px;
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  color: #fff;
+  color: $police-color-light;
   border-radius: 100%;
   outline: 0;
-  background-color: $footer-background-grey;
+  background-color: $dark-color;
 }
 
+/*
 footer .quick-links {
   font-size: 90%;
   line-height: 40px;
@@ -78,6 +78,4 @@ footer .quick-links {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.copyright {
-  color: white;
-}
+*/

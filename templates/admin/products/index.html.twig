@@ -10,7 +10,6 @@
                     <tr>
                         <th>Id</th>
                         <th>Nom</th>
-                        <th>Ingredient</th>
                         <th>Nom de l'image</th>
                         <th>Categorie</th>
                         <th>Mise à jour</th>
@@ -22,7 +21,6 @@
                     <tr>
                         <td>{{ product.id }}</td>
                         <td>{{ product.name }}</td>
-                        <td>{{ product.ingredient }}</td>
                         <td>{{ product.imageName }}</td>
                         <td>{{ product.categories.name }}</td>
                         <td>{{ product.updated ? product.updated|date('d-m-Y H:i') : '' }}</td>

@@ -27,11 +27,6 @@ class Products
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $ingredient;
-
-    /**
      * @ORM\Column(type="string")
      *
      */
@@ -77,17 +72,6 @@ class Products
         return $this;
     }
 
-    public function getIngredient(): ?string
-    {
-        return $this->ingredient;
-    }
-
-    public function setIngredient(?string $ingredient): self
-    {
-        $this->ingredient = $ingredient;
-
-        return $this;
-    }
 
     public function setImageName(?string $imageName): void
     {

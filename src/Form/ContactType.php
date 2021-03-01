@@ -21,7 +21,7 @@ class ContactType extends AbstractType
                 'label' => 'Numéro'
             ])
             ->add('Email', EmailType::class, [
-                'label' => 'Mail'
+                'label' => 'Mail '
             ])
             ->add('Message', CKEditorType::class, [
                 'label' => 'Message'

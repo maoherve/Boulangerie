@@ -1,13 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
+@import "variable";
+
 @import "homepage";
-@import "admin";
+@import "navbar";
 @import "footer";
 @import "products";
 @import "timetable";
-@import "map";
 @import "order";
-@import "variable";
-@import "navbar";
+@import "map";
+@import "admin";
 
 
 /*

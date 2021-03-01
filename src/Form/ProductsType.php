@@ -19,9 +19,6 @@ class ProductsType extends AbstractType
             ->add('name',TextType::class, [
                 'label' => 'Nom'
             ])
-            ->add('ingredient',TextType::class, [
-                'label' => 'Ingrédients'
-            ])
             ->add('categories', null,
                 ['choice_label' => 'name',
                     'label' => 'Catégories'

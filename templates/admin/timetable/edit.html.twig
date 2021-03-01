@@ -4,11 +4,11 @@
 {% block main %}
     <div class="adminContainer container container-fluid">
 
-        <h1>Edit Timetable</h1>
+        <h1>Modifier les horaires :</h1>
 
-            {{ include('admin/timetable/_form.html.twig', {'button_label': 'Update'}) }}
+            {{ include('admin/timetable/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-            <a href="{{ path('admin_timetable_index') }}">back to list</a>
+            <a href="{{ path('admin_timetable_index') }}">Retour à la liste.</a>
 
             {{ include('admin/timetable/_delete_form.html.twig') }}
     </div>

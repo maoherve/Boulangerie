@@ -3,17 +3,16 @@
 
 {% block main %}
     <div class="adminContainer container container-fluid">
-        <h2>Products index</h2>
+        <h2>Menu des produits :</h2>
 
             <table class="table">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Name</th>
-                        <th>Ingredient</th>
-                        <th>ImageName</th>
-                        <th>Category</th>
-                        <th>Updated</th>
+                        <th>Nom</th>
+                        <th>Nom de l'image</th>
+                        <th>Categorie</th>
+                        <th>Mise à jour</th>
                         <th>actions</th>
                     </tr>
                 </thead>
@@ -22,7 +21,6 @@
                     <tr>
                         <td>{{ product.id }}</td>
                         <td>{{ product.name }}</td>
-                        <td>{{ product.ingredient }}</td>
                         <td>{{ product.imageName }}</td>
                         <td>{{ product.categories.name }}</td>
                         <td>{{ product.updated ? product.updated|date('d-m-Y H:i') : '' }}</td>
@@ -32,12 +30,12 @@
                     </tr>
                 {% else %}
                     <tr>
-                        <td colspan="6">no records found</td>
+                        <td colspan="6">Pas de produit disponible !</td>
                     </tr>
                 {% endfor %}
                 </tbody>
             </table>
 
-            <a href="{{ path('admin_products_new') }}">Create new</a>
+            <a href="{{ path('admin_products_new') }}">Créer un nouveau produit !</a>
     </div>
 {% endblock %}

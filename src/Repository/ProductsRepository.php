@@ -19,6 +19,11 @@ class ProductsRepository extends ServiceEntityRepository
         parent::__construct($registry, Products::class);
     }
 
+    public function findProductsByASC(): array
+    {
+        return $this->findBy(array(), array('name' => 'ASC'));
+    }
+
     // /**
     //  * @return Products[] Returns an array of Products objects
     //  */

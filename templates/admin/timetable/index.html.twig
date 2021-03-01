@@ -3,17 +3,17 @@
 {% block main %}
     <div class="adminContainer container container-fluid">
 
-        <h2>Timetable index</h2>
+        <h2>Menu des horaires :</h2>
 
             <table class="table">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Morning</th>
-                        <th>Afternoon</th>
-                        <th>Close</th>
-                        <th>winter Holiday</th>
-                        <th>summer Holiday</th>
+                        <th>Matin</th>
+                        <th>Après-midi</th>
+                        <th>Fermé</th>
+                        <th>Vaccances d'hiver</th>
+                        <th>Vaccances d'été</th>
                         <th>actions</th>
                     </tr>
                 </thead>
@@ -33,12 +33,12 @@
                     </tr>
                 {% else %}
                     <tr>
-                        <td colspan="6">no records found</td>
+                        <td colspan="6">Pas d'horaires disponible !</td>
                     </tr>
                 {% endfor %}
                 </tbody>
             </table>
 
-            <a href="{{ path('admin_timetable_new') }}">Create new</a>
+            <a href="{{ path('admin_timetable_new') }}">Créer de nouvelles horaires !</a>
     </div>
 {% endblock %}

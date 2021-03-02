@@ -13,6 +13,10 @@
   align-content: stretch;
 }
 
+.deleteBtn {
+  background-color: #dd6262 !important;
+}
+
 @media screen and (max-width: 800px) {
   .adminContainer {
     display: flex;

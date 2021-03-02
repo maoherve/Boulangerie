@@ -1,10 +1,10 @@
 @import "variable";
 
-.titleLogin, .adminContainer {
+.titleLogin, .adminContainer, .adminBlockContainer {
   margin-top: $margingXLarge;
 }
 
-.loginContainer {
+.loginContainer, .adminContainer {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -18,7 +18,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .adminContainer {
+  .adminBlockContainer {
     display: flex;
     flex-direction: column !important;
     flex-wrap: nowrap;

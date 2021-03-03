@@ -32,12 +32,3 @@
         </div>
     </div>
 {% endblock %}
-
-{% block footer %}
-    {% if products is  empty %}
-        {% include 'includes/_fixedFooter.html.twig' %}
-
-    {% else %}
-        {% include 'includes/_footer.html.twig' %}
-    {% endif %}
-{% endblock %}

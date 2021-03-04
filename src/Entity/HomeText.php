@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\HomeTexteRepository;
+use App\Repository\HomeTextRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=HomeTexteRepository::class)
+ * @ORM\Entity(repositoryClass=HomeTextRepository::class)
  */
-class HomeTexte
+class HomeText
 {
     /**
      * @ORM\Id

@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Carousel;
-use App\Entity\HomeTexte;
+use App\Entity\HomeText;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -23,7 +23,7 @@ class HomeController extends AbstractController
             ->findAll();
 
         $homeTexte = $this->getDoctrine()
-            ->getRepository(HomeTexte::class)
+            ->getRepository(HomeText::class)
             ->findAll();
 
 

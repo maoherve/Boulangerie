@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\HomeTexte;
+use App\Entity\HomeText;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method HomeTexte|null find($id, $lockMode = null, $lockVersion = null)
- * @method HomeTexte|null findOneBy(array $criteria, array $orderBy = null)
- * @method HomeTexte[]    findAll()
- * @method HomeTexte[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method HomeText|null find($id, $lockMode = null, $lockVersion = null)
+ * @method HomeText|null findOneBy(array $criteria, array $orderBy = null)
+ * @method HomeText[]    findAll()
+ * @method HomeText[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class HomeTexteRepository extends ServiceEntityRepository
+class HomeTextRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, HomeTexte::class);
+        parent::__construct($registry, HomeText::class);
     }
 
     // /**
-    //  * @return HomeTexte[] Returns an array of HomeTexte objects
+    //  * @return HomeText[] Returns an array of HomeText objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class HomeTexteRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?HomeTexte
+    public function findOneBySomeField($value): ?HomeText
     {
         return $this->createQueryBuilder('h')
             ->andWhere('h.exampleField = :val')

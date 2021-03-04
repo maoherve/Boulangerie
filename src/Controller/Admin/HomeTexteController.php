@@ -2,9 +2,9 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\HomeTexte;
+use App\Entity\HomeText;
 use App\Form\HomeTexteType;
-use App\Repository\HomeTexteRepository;
+use App\Repository\HomeTextRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,7 +33,7 @@ class HomeTexteController extends AbstractController
      */
     public function new(Request $request): Response
     {
-        $homeTexte = new HomeTexte();
+        $homeTexte = new HomeText();
         $form = $this->createForm(HomeTexteType::class, $homeTexte);
         $form->handleRequest($request);
 
@@ -56,7 +56,7 @@ class HomeTexteController extends AbstractController
     /**
      * @Route("/{id}/edit", name="edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, HomeTexte $homeTexte): Response
+    public function edit(Request $request, HomeText $homeTexte): Response
     {
         $form = $this->createForm(HomeTexteType::class, $homeTexte);
         $form->handleRequest($request);
@@ -76,7 +76,7 @@ class HomeTexteController extends AbstractController
     /**
      * @Route("/{id}", name="delete", methods={"DELETE"})
      */
-    public function delete(Request $request, HomeTexte $homeTexte): Response
+    public function delete(Request $request, HomeText $homeTexte): Response
     {
         if ($this->isCsrfTokenValid('delete'.$homeTexte->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();

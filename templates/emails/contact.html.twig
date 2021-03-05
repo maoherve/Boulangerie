@@ -1,11 +1,10 @@
-<h1>Contact commande Client</h1>
+<div class="container container-fluid">
+    <h2>Contact commande Client</h2>
 
-<h2>Demande : {{ Demande }}</h2>
+        <p>De : {{ Mail }}</p>
+        <p>Nom : {{ Nom }}</p>
+        <h3>Demande : {{ Demande }}</h3>
+        <p>Numéro : {{ Numero }}</p>
 
-
-
-<p>De : {{ Mail }}</p>
-<p>Nom : {{ Nom }}</p>
-<p>Numéro : {{ Numero }}</p>
-<p>Message : {{ Message|raw }}</p>
-
+        <p>Message : {{ Message|raw }}</p>
+</div>

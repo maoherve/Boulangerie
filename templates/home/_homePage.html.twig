@@ -1,8 +1,8 @@
 {% if homeTexte is not empty %}
     {% for texte in homeTexte %}
         <div class="homeContainer container container-fluid mt-3">
-            <h1>{{ texte.title }}</h1>
-            <p>{{ texte.description }}</p>
+            <h1>{{ texte.title |raw}}</h1>
+            <p>{{ texte.description |raw}}</p>
         </div>
     {% endfor %}
 {% endif %}

@@ -1,12 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
+@import "variable";
+
 @import "homepage";
-@import "admin";
+@import "navbar";
 @import "footer";
 @import "products";
 @import "timetable";
-@import "map";
 @import "order";
-@import "variable";
+@import "map";
+@import "admin";
 
 
 /*
@@ -27,4 +29,8 @@ media for footer placement correctly in desktop mod
         bottom: 0;
         width: 100%;
     }
+}
+
+body {
+    background-color: $background-color;
 }

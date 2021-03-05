@@ -3,46 +3,45 @@
 {% block title %}Connexion !{% endblock %}
 
 {% block main %}
-<form method="post" class="container container-fluid mt-5">
+<form method="post" class="loginContainer container container-fluid justify-content-center mt-5">
+        <h2 class="titleLogin h3 mb-3 font-weight-normal">Connectez vous !</h2>
+        <!-- error message if login of password wrong  -->
+        {% if error %}
+            <div class="alert alert-danger mt-5">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
 
-    <h2 class="titleLogin h3 mb-3 font-weight-normal">Connectez vous !</h2>
-    <!-- error message if login of password wrong  -->
-    {% if error %}
-        <div class="alert alert-danger mt-5">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+        <!-- if log tel the username  -->
+        {% if app.user %}
+            <div class="mb-3">
+                Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
+            </div>
+        {% endif %}
 
-    <!-- if log tel the username  -->
-    {% if app.user %}
-        <div class="mb-3">
-            Vous êtes connecté en tant que {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
-        </div>
-    {% endif %}
-    <label for="inputUsername">Nom d'utilisateur</label>
-    <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" required autofocus>
-    <label for="inputPassword">Mot de passe</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" required>
+        <label for="inputUsername">Nom d'utilisateur</label>
+        <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control w-50" required autofocus>
+        <label for="inputPassword">Mot de passe</label>
+        <input type="password" name="password" id="inputPassword" class="form-control w-50" required>
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}">
+        <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}">
 
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
+        {#
+            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+            See https://symfony.com/doc/current/security/remember_me.html
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-    #}
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Remember me
+                </label>
+            </div>
+        #}
 
-    <button class="btn btn-lg btn-primary mt-3" type="submit">
-        connexion
-    </button>
+        <button class="btn btn-lg  mt-3" type="submit">
+            connexion
+        </button>
 </form>
 {% endblock %}
 
 
 {% block footer %}
-    {% include 'includes/_fixedFooter.html.twig' %}
 {% endblock %}

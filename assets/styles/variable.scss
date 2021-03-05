@@ -1,23 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Josefin+Slab&display=swap');
 
-h1, H2, H3, p , a ,span, li, ul {
-  color: #101011;
-}
-
-h1, H2, H3 {
-  size: 16px;
-}
-
-p , a ,span, li, ul {
-  size: 12px;
-}
-
-a {
-  text-decoration: none !important;
-}
-
+$paddingXLarge : 150px;
 $paddingLarge : 100px;
 $paddingSmall : 50px;
 
 $margingXLarge : 150px;
-$margingLarge : 100px;
+$margingLarge : 110px;
 $margingSmall : 50px;
+
+$dark-color : #532501;
+$background-color : #f6efe2;
+$main-color : #a5826b;
+$secondary-color : #f8f3f2;
+
+$police-color : #101011;
+$police-color-light : #e3e0e0;
+
+
+h1, H2, H3, p, a, span, li, ul {
+  color: $police-color;
+}
+
+h1, H2, H3 {
+  font-size: 28px;
+  font-family: 'Josefin Slab', serif;
+}
+
+p ,a ,span, li, ul, label {
+  font-size: 20px;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.btn {
+  background-color: $main-color ;
+}

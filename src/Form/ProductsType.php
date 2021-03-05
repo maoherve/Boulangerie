@@ -16,16 +16,23 @@ class ProductsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('ingredient')
-            ->add('categories', null, ['choice_label' => 'name'])
-            ->add('imageName', TextType::class, ['label' => 'Nom de l\'image'])
+            ->add('name',TextType::class, [
+                'label' => 'Nom'
+            ])
+            ->add('categories', null,
+                ['choice_label' => 'name',
+                    'label' => 'Catégories'
+                ])
+            ->add('imageName', TextType::class,
+                ['label' => 'Nom de l\'image'
+                ])
             ->add('imageFile', VichFileType::class, [
                 'required' => false,
                 'download_label' => false,
                 'allow_delete' => false,
                 'download_uri' => false,
                 'asset_helper' => false,
+                'label' => 'Fichier'
             ])
         ;
     }

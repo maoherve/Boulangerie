@@ -1,5 +1,18 @@
 @import "variable";
 
+.btnProduct {
+  background-color: $main-color;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 1s;
+
+  min-width: 129px;
+}
+.btnProduct:hover {
+  background-color: $secondary-color;
+}
+
 
 .productContainer {
   margin-top: $margingXLarge;
@@ -22,6 +35,9 @@
   margin-top: $margingSmall;
 }
 
+.productCard {
+  background-color: $secondary-color;
+}
 
 @media screen and (max-width: 800px) {
   .productDetail {

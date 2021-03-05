@@ -7,13 +7,18 @@
         </div>
     {% endfor %}
     <div class="productContainer container container-fluid mb-5">
-        {% for category in categories %}
-                <button type="button" class="btn "><a href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
-                        {{ category.name }}</a></button>
-        {% endfor %}
+
+        <div class=" container container-fluid justify-content-center row">
+            {% for category in categories %}
+                <a class="btnProduct btn m-3 col-auto" href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
+                    {{ category.name }}
+                </a>
+            {% endfor %}
+        </div>
+
         <div class="row">
             {% for product in products %}
-                <div class="card container mt-5" style="width: 25rem;">
+                <div class="productCard card container mt-5" style="width: 25rem;">
                         <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="card-img-top mt-2" alt="product_picture">
 
                         <div class="card-body">
@@ -26,13 +31,4 @@
             {% endfor %}
         </div>
     </div>
-{% endblock %}
-
-{% block footer %}
-    {% if products is  empty %}
-        {% include 'includes/_fixedFooter.html.twig' %}
-
-    {% else %}
-        {% include 'includes/_footer.html.twig' %}
-    {% endif %}
 {% endblock %}

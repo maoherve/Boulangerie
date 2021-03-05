@@ -1,11 +1,24 @@
 @import "variable";
 
-.titleLogin {
+.titleLogin, .adminContainer, .adminBlockContainer {
   margin-top: $margingXLarge;
 }
 
+.loginContainer, .adminContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.deleteBtn {
+  background-color: #dd6262 !important;
+}
+
 @media screen and (max-width: 800px) {
-  .adminContainer {
+  .adminBlockContainer {
     display: flex;
     flex-direction: column !important;
     flex-wrap: nowrap;

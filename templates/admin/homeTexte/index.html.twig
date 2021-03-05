@@ -2,34 +2,36 @@
 
 
 {% block main %}
-    <h1>HomeTexte index</h1>
+    <div class="adminContainer container container-fluid">
+        <h1>Menu du texte d'acceuil :</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for home_texte in home_textes %}
-            <tr>
-                <td>{{ home_texte.id }}</td>
-                <td>{{ home_texte.title }}</td>
-                <td>{{ home_texte.description }}</td>
-                <td>
-                    <a href="{{ path('admin_homeTexte_edit', {'id': home_texte.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titre</th>
+                    <th>Description</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for home_texte in home_textes %}
+                <tr>
+                    <td>{{ home_texte.id }}</td>
+                    <td>{{ home_texte.title }}</td>
+                    <td>{{ home_texte.description }}</td>
+                    <td>
+                        <a href="{{ path('admin_homeTexte_edit', {'id': home_texte.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">Pas de texte d'acceuil disponible !</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <a href="{{ path('admin_homeTexte_new') }}">Create new</a>
+        <a href="{{ path('admin_homeTexte_new') }}">Créer un nouveau texte d'acceuil !</a>
+    </div>
 {% endblock %}

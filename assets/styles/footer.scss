@@ -1,11 +1,10 @@
 @import "variable";
 
-$link-light-grey: $police-color;
 $primary-orange: #fec503;
 
 
 .linkFooter {
-  color: $link-light-grey;
+  color: $police-color;
 }
 .linkFooter:hover {
   color: $primary-orange;
@@ -15,7 +14,7 @@ $primary-orange: #fec503;
 
 footer {
   padding: 1rem 0;
-  background-color: #986c42;
+  background-color: $dark-color;
 }
 
 
@@ -26,7 +25,7 @@ footer {
       padding: 0.1rem 0;
     }
     span.nav-link {
-      color: $link-light-grey;
+      color: $police-color;
     }
     span.footer-title {
       font-size: 14px;
@@ -63,10 +62,10 @@ footer {
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
-  color: $police-color-light;
+  color: $police-color;
   border-radius: 100%;
   outline: 0;
-  background-color: $dark-color;
+  background-color: $police-color-light;
 }
 
 /*

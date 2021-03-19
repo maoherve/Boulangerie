@@ -8,18 +8,12 @@
         {% endif %}
     </ol>
 
-
     <div class="carousel-inner">
         {% if carousel is not empty %}
             {% for image in carousel %}
 
                 <div class="carousel-item {{ loop.first ? 'active': '' }}">
-
                     <img src="{{ vich_uploader_asset(image, 'imageFile') }}" class="carouselPicture  d-block w-100 h-auto" alt="carousel_picture">
-
-                    <!--<div class="carousel-caption d-none d-md-block">
-                        <h3> image.title </h3>
-                    </div>-->
                 </div>
             {% endfor %}
         {% endif %}

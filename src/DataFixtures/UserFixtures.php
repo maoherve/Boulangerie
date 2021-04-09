@@ -20,7 +20,7 @@ class UserFixtures extends Fixture
     {
         $admin = new User();
         $admin->setUsername('AdminUser');
-        $admin->setRoles(['ROLE_ADMIN']);
+        $admin->setRoles(['ROLE_SUPER_ADMIN']);
         $admin->setPassword($this->passwordEncoder->encodePassword(
             $admin,
             'AdminPass'

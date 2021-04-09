@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
- * @Route("/administrationUtilisateurs", name="admin_user_")
+ * @Route("/administration/utilisateurs", name="admin_user_")
  *
  * @IsGranted("ROLE_SUPER_ADMIN")
  */
@@ -31,6 +31,9 @@ class UserController extends AbstractController
 
     /**
      * @Route("/new", name="new", methods={"GET","POST"})
+     * @param Request $request
+     * @param UserPasswordEncoderInterface $passwordEncoder
+     * @return Response
      */
     public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {

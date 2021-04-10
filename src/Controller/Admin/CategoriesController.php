@@ -5,16 +5,14 @@ namespace App\Controller\Admin;
 use App\Entity\Categories;
 use App\Form\CategoriesType;
 use App\Repository\CategoriesRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/administrationCategories", name="admin_categories_")
+ * @Route("/administration/categories", name="admin_categories_")
  *
- * @IsGranted("ROLE_ADMIN")
  */
 class CategoriesController extends AbstractController
 {

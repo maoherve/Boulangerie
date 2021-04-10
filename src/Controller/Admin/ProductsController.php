@@ -5,16 +5,13 @@ namespace App\Controller\Admin;
 use App\Entity\Products;
 use App\Form\ProductsType;
 use App\Repository\ProductsRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/administrationProduits", name="admin_products_")
- *
- * @IsGranted("ROLE_ADMIN")
+ * @Route("/administration/produits", name="admin_products_")
  */
 class ProductsController extends AbstractController
 {
@@ -22,6 +19,8 @@ class ProductsController extends AbstractController
      * @Route("/", name="index", methods={"GET"})
      *
      * CRUD for the products
+     * @param ProductsRepository $productsRepository
+     * @return Response
      */
     public function index(ProductsRepository $productsRepository): Response
     {
@@ -32,6 +31,8 @@ class ProductsController extends AbstractController
 
     /**
      * @Route("/new", name="new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -56,6 +57,9 @@ class ProductsController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param Products $product
+     * @return Response
      */
     public function edit(Request $request, Products $product): Response
     {
@@ -76,6 +80,9 @@ class ProductsController extends AbstractController
 
     /**
      * @Route("/{id}", name="delete", methods={"DELETE"})
+     * @param Request $request
+     * @param Products $product
+     * @return Response
      */
     public function delete(Request $request, Products $product): Response
     {

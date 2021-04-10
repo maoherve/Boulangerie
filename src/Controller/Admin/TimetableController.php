@@ -5,16 +5,14 @@ namespace App\Controller\Admin;
 use App\Entity\Timetable;
 use App\Form\TimetableType;
 use App\Repository\TimetableRepository;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/administrationHoraires", name="admin_timetable_")
+ * @Route("/administration/horaires", name="admin_timetable_")
  *
- * @IsGranted("ROLE_ADMIN")
  */
 class TimetableController extends AbstractController
 {

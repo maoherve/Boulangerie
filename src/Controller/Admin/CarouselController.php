@@ -9,13 +9,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 
 /**
- * @Route("/administrationCarousel", name="admin_")
+ * @Route("/administration/carousel", name="admin_")
  *
- * @IsGranted("ROLE_ADMIN")
  *
  * CRUD of carousel
  */

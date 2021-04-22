@@ -1,11 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
-    {% for message in app.flashes('message') %}
-        <div class="alert alert-success mt-5" role="alert">
-            {{ message }}
-        </div>
-    {% endfor %}
+
     <div class="productContainer container container-fluid mb-5">
 
         <div class=" container container-fluid justify-content-center row">
@@ -19,7 +15,7 @@
         <div class="row">
             {% for product in products %}
                 <div class="productCard card container mt-5" style="width: 25rem;">
-                        <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="card-img-top mt-2" alt="product_picture">
+                        <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="productPicture card-img-top mt-2" alt="product_picture">
 
                         <div class="card-body">
                             <p class="card-text">{{ product.name }}</p>

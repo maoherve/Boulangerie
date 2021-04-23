@@ -48,7 +48,6 @@ class OrderController extends AbstractController
             return $this->redirectToRoute('home');
         }
 
-
         return $this->render('order/index.html.twig', [
             'form' => $form->createView(),
         ]);

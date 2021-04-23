@@ -1,32 +1,27 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
-    {% for message in app.flashes('message') %}
-        <div class="alert alert-success mt-5" role="alert">
-            {{ message }}
-        </div>
-    {% endfor %}
-    <div class="productContainer container container-fluid  mb-5">
+    <div class="productContainer container container-fluid mb-5">
 
-            <div class="container container-fluid justify-content-center row">
-                    {% for category in categories %}
-                        <a class="btnProduct btn m-3 col-auto" href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
-                            {{ category.name }}
-                        </a>
-                    {% endfor %}
-              </div>
+        <div class="container container-fluid justify-content-center row">
+            {% for category in categories %}
+                <a class="btnProduct btn m-3 col-auto" href="{{ path('products_show_category', { 'categoryName' : category.name }) }}">
+                    {{ category.name }}
+                </a>
+            {% endfor %}
+        </div>
 
         <div class="row">
             {% for product in products %}
-                <div class="productCard card container mt-5" style="width: 25rem;">
-                        <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="card-img-top mt-2" alt="product_picture">
+                <div class="productCard container mt-5 ">
+                        <img src="{{ vich_uploader_asset(product, 'imageFile') }}" class="productPicture  mt-2 " alt="product picture">
 
-                        <div class="card-body">
-                            <p class="card-text">{{ product.name }}</p>
+                        <div class="middle card-body">
+                            <p class="productTitle card-text">{{ product.name }}</p>
                         </div>
                 </div>
             {% else %}
-                <div class="card-body">Pas de produit disponible dans cette catégorie !</div>
+                <div class="card-body"><p>Pas de produit disponible dans cette catégorie !</p></div>
             {% endfor %}
         </div>
     </div>

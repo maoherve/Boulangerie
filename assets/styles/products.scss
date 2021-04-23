@@ -9,7 +9,7 @@
 
   min-width: 129px;
 }
-.btnProduct:hover {
+.btnProduct:hover, .btnProduct:active  {
   background-color: $secondary-color;
 }
 
@@ -17,38 +17,59 @@
 .productContainer {
   margin-top: $margingXLarge;
   padding-bottom: $paddingLarge;
-}
 
-.productDetailPicture {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: stretch;
-  align-content: stretch;
 
-  width: 350px;
-  height: auto;
-}
-
-.productDetailInformations {
-  margin-top: $margingSmall;
 }
 
 .productCard {
-  background-color: $secondary-color;
+  /*background-color: $secondary-color;*/
+  position: relative;
+
+  width: 25rem;
+  height: 25rem;
+
+  display: flex;
+  justify-content: center;
+
+}
+
+.productPicture {
+  opacity: 1;
+  display: block;
+  width: 20rem;
+  height: 20rem;
+  transition: .5s ease;
+  backface-visibility: hidden;
+
+  clip-path:ellipse(50% 50%);
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.productCard:hover .productPicture, .productCard:active .productPicture  {
+  opacity: 0.3;
+}
+
+.productCard:hover .middle, .productCard:active .middle {
+  opacity: 1;
+}
+
+.productTitle{
+  background-color: $main-color;
+  color: $police-color;
+  font-size: 16px;
+  padding: 16px 32px;
 }
 
 @media screen and (max-width: 800px) {
-  .productDetail {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: stretch;
-  }
+
 }
-
-
-

@@ -1,17 +1,18 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
-   <div  class="tableContainer table-responsive container container-fluid">
-      <h2 class="titleTimetable">Nos horaires d'ouvertures:</h2>
+   <div  class="timetableContainer table-responsive container container-fluid">
 
-      {% for timetable in timetables %}
+        {% for timetable in timetables %}
+            <div class="timetableCard">
+                <h2 class="titleTimetable">Nos horaires d'ouvertures:</h2>
+                    <p>Ouvert du mardi au dimanche de {{ timetable.morning }}.</p>
+                    <p>Et du mercredi au samedi de {{ timetable.afternoon }}.</p>
 
-          <p>Ouvert du mardi au dimanche de {{ timetable.morning }}.</p>
-          <p>Et du mercredi au samedi de {{ timetable.afternoon }}.</p>
-
-         <h2 class="mt-5 titleTimetable">Congés annuels:</h2>
-         <p>{{ timetable.winterHoliday }}</p>
-         <p>{{ timetable.summerHoliday }}</p>
-      {% endfor %}
+                <h2 class="mt-5 titleTimetable">Congés annuels:</h2>
+                    <p>{{ timetable.winterHoliday }}</p>
+                    <p>{{ timetable.summerHoliday }}</p>
+            </div>
+        {% endfor %}
    </div>
 {% endblock %}

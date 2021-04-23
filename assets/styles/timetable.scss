@@ -1,8 +1,15 @@
 @import "variable";
 
-.tableContainer {
+.timetableContainer {
   margin-top: $margingXLarge;
   padding-bottom: $paddingXLarge;
+}
+
+.timetableCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .titleTimetable {

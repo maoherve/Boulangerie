@@ -1,13 +1,13 @@
 @import "variable";
 
-$primary-orange: #fec503;
+$hover-color: #f6f6f3;
 
 
 .linkFooter {
   color: $police-color;
 }
-.linkFooter:hover {
-  color: $primary-orange;
+.linkFooter:hover,  {
+  color: $hover-color;
   text-decoration: none;
 }
 
@@ -54,7 +54,7 @@ footer {
 .ulFooter.social-buttons li a:active,
 .ulFooter.social-buttons li a:focus,
 .ulFooter.social-buttons li a:hover {
-  background-color: $primary-orange;
+  background-color: $hover-color;
 }
 
 .ulFooter.social-buttons li a {

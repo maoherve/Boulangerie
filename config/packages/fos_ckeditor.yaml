@@ -10,4 +10,4 @@ fos_ck_editor:
                 - { name: "styles", items: ['Bold', 'Italic', 'Underline', '-',
                 'BulletedList', '-','JustifyLeft',
                 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-',
-                '-', 'Font','FontSize', '-', 'TextColor'] }
+                '-','FontSize', '-', 'TextColor'] }

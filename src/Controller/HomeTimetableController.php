@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HtimetableController extends AbstractController
+class HomeTimetableController extends AbstractController
 {
     /**
      * @Route("/horaires", name="timetable")
@@ -20,7 +20,7 @@ class HtimetableController extends AbstractController
             ->getRepository(Timetable::class)
             ->findAll();
 
-        return $this->render('Htimetable/index.html.twig', [
+        return $this->render('homeTimetable/index.html.twig', [
             'timetables' => $timetables,
             ])
         ;

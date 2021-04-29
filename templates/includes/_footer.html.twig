@@ -1,27 +1,7 @@
 <footer id="bottom-footer" class="footer">
+
     <div class="footerContainer container">
         <div class="row">
-            <div class="col-md-4 footer-column">
-                <ul class="ulFooter nav flex-column">
-                    <li class="nav-item">
-                        <span class="footer-title">Autre</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="linkFooter nav-link" href="{{ path('map') }}">Plan</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4 footer-column">
-                <ul class="ulFooter nav flex-column list-inline social-buttons">
-                    <li class="nav-item list-inline-item">
-                        <a class="linkFooter text-center"
-                           href="https://www.facebook.com/Boulangerie-P%C3%A2tisserie-Traiteur-Goguillon-1413289582033448"
-                           target="_blank">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
             <div class="col-md-4 footer-column">
                 <ul class="ulFooter nav flex-column">
                     <li class="nav-item">
@@ -34,13 +14,31 @@
                             </a>
                         </span>
                     </li>
+                </ul>
+            </div>
 
+            <div class="col-md-4 footer-column">
+                <ul class="ulFooter nav flex-column list-inline social-buttons">
+                    <li class="nav-item list-inline-item">
+                        <a class="linkFooter text-center"
+                           href="https://www.facebook.com/Boulangerie-P%C3%A2tisserie-Traiteur-Goguillon-1413289582033448"
+                           target="_blank">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 footer-column">
+                <ul class="ulFooter nav flex-column">
                     <li class="nav-item">
-                        <span class="nav-link">
-                            <a class="linkFooter" href="tel:+33248746563">
-                                <i class="bi bi-telephone-fill"></i>02.48.74.65.63
-                            </a>
-                        </span>
+                        <span class="footer-title">Autres</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="linkFooter nav-link" href="{{ path('map') }}">Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="linkFooter nav-link" href="{{ path('condition') }}">Conditions</a>
                     </li>
                 </ul>
             </div>

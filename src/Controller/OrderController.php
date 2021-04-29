@@ -32,7 +32,7 @@ class OrderController extends AbstractController
                 ->from($contact->get('Email')->getData())
                 ->to(new Address('maoherve8@gmail.com'))
                 ->subject('Commande client.')
-                ->htmlTemplate('emails/contact.html.twig')
+                ->htmlTemplate('order/emails/contact.html.twig')
                 ->context([
                     'Demande' => $contact->get('Demande')->getData(),
                     'Nom' => $contact->get('Nom')->getData(),

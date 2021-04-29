@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
  *
  * @Route("/produits", name="products_")
  */
-class HproductsController extends AbstractController
+class HomeProductsController extends AbstractController
 {
     /**
      * @Route("/", name="index")
@@ -30,7 +30,7 @@ class HproductsController extends AbstractController
             ->getRepository(Categories::class)
             ->findAll();
 
-        return $this->render('hproducts/index.html.twig', [
+        return $this->render('homeProducts/index.html.twig', [
             'products' => $products, 'categories' => $categories,
         ]);
     }
@@ -55,7 +55,7 @@ class HproductsController extends AbstractController
             ->findAll();
 
 
-        return $this->render("hproducts/category.html.twig",
+        return $this->render("homeProducts/category.html.twig",
             ['products' => $products,
                 'categories' => $categories,
             ]);

@@ -3,7 +3,7 @@
 .navbar {
   background-color: $dark-color;
 
-  border-radius: 0 0 13% 13%;
+  border-radius: 0 0 11% 11%;
   border-bottom: 1px solid ;
 }
 
@@ -18,3 +18,8 @@
   width: auto;
 }
 
+@media screen and (max-width: 340px) {
+  .logoName {
+    display:none;
+  }
+}

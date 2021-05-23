@@ -14,12 +14,12 @@
 # https://symfony.com/doc/current/best_practices.html#use-environment-variables-for-infrastructure-configuration
 
 ###> symfony/framework-bundle ###
-APP_ENV=prod
+APP_ENV=dev
 APP_SECRET=d3f84e57bddac1f39f96c1d756dbcd93
 ###< symfony/framework-bundle ###
 
 ###> symfony/mailer ###
-MAILER_DSN=smtp://contact@boulangeriegoguillon.fr:13Janvier19.ovh.net:587
+MAILER_DSN=smtp://contact@boulangeriegoguillon.fr:MDP.ovh.net:587
 ###< symfony/mailer ###
 
 ###> doctrine/doctrine-bundle ###
@@ -31,6 +31,6 @@ MAILER_DSN=smtp://contact@boulangeriegoguillon.fr:13Janvier19.ovh.net:587
 # DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=13&charset=utf8"
 ###< doctrine/doctrine-bundle ###
 
-DATABASE_URL="mysql://boulanyroot:13Janvier19@boulanyroot.mysql.db/boulanyroot?serverVersion=5.6"
+DATABASE_URL="mysql://root:MDP@root.mysql.db/root?serverVersion=5.6"
 
 
